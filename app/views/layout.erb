@@ -1,23 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello World</title>
+    <title>DREW ANDRÉ</title>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
     <link rel="stylesheet" href="/stylesheets/app.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   </head>
   <body>
-
-    <!-- print flash messages -->
-    <% flash.each do |type, message| %>
-      <div class="flash flash-<%= type %>">
-        <%= message %>
+    <nav id='main-nav'>
+      <div>
+        <i class="fa fa-bars fa-2x" id='menu-icon' aria-hidden="true"></i>
+        <a href='/'><img id='signature' src='/images/signature.png'></img></a>
       </div>
-    <% end %>
-
-    <!-- main content -->
-    <%= yield %>
-
+      <div class='social-media-icon-list'>
+        <a href='https://www.linkedin.com/in/drewandre/' target="_blank"><i class="fa fa-linkedin-square fa-2x" id='social-media-icon' aria-hidden="true"></i></a>
+        <a href='https://www.instagram.com/_drewandre/' target="_blank"><i class="fa fa-instagram fa-2x" id='social-media-icon' aria-hidden="true"></i></a>
+        <a href='https://github.com/drewandre' target="_blank"><i class="fa fa-github-square fa-2x" id='social-media-icon' aria-hidden="true"></i></a>
+      </div>
+      <ul>
+        <li><a href="/custom-installs" id='custom-work'>custom work inquiries</a></li>
+        <li><a href="/">home</a></li>
+        <li><a href="/about">about</a></li>
+        <li><a href="/contact">contact</a></li>
+        <!-- <li><a href="/store">store</a></li> -->
+        <li><a id='no-hover'>work</a>
+          <ul>
+            <li><a id='no-hover'>web</a>
+              <ul>
+                <li><a href="/work/web/palette">Palette</a></li>
+                <li><a href="/work/web/reporev">RepoRev</a></li>
+              </ul>
+            </li>
+            <li><a id='no-hover'>lighting</a>
+              <ul>
+                <li><a href="/work/lighting/aura">Aura</a></li>
+                <li><a href="/work/lighting/boston">Boston</a></li>
+                <li><a href="/work/lighting/back-bay">Back Bay</a></li>
+                <li><a href="/work/lighting/connecticut-college">Connecticut College</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div id='below-nav'>
+    <% flash.each do |type, message| %>
+        <div class="flash flash-<%= type %>">
+          <%= message %>
+        </div>
+      <% end %>
+        <%= yield %>
+    </div>
     <script src="/javascripts/app.js"></script>
   </body>
 </html>
