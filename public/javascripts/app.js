@@ -1,17 +1,11 @@
 $('#main-nav').mouseenter(function() {
-  $('canvas').css({
-    filter: 'blur(10px)'
-  });
-  $('.home-centered').css({
+  $('#below-nav').css({
     filter: 'blur(10px)'
   });
 });
 
 $('#main-nav').mouseleave(function() {
-  $('canvas').css({
-    filter: 'blur(1px)'
-  });
-  $('.home-centered').css({
+  $('#below-nav').css({
     filter: 'none'
   });
 });

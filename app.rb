@@ -22,6 +22,51 @@ Dir[File.join(File.dirname(__FILE__), 'app', '**', '*.rb')].each do |file|
 end
 
 get '/' do
-  # @title = "Hello World"
   erb :index
+end
+
+get '/about' do
+  erb :about
+end
+
+get '/contact' do
+  erb :contact
+end
+
+get '/store' do
+  erb :store
+end
+
+get '/custom-installs' do
+  erb :custom_installs
+end
+
+get '/work/web/palette' do
+  @photo = 'palette_photo_here'
+  erb :web_work
+end
+
+get '/work/web/reporev' do
+  @photo = 'reporev_photo_here'
+  erb :web_work
+end
+
+get '/work/lighting/aura' do
+  @photo = 'palette_photo_here'
+  erb :lighting_work
+end
+
+get '/work/lighting/boston' do
+  @photo = 'palette_photo_here'
+  erb :lighting_work
+end
+
+get '/work/lighting/back-bay' do
+  @photo = 'palette_photo_here'
+  erb :lighting_work
+end
+
+get '/work/lighting/connecticut-college' do
+  @photo = 'palette_photo_here'
+  erb :lighting_work
 end

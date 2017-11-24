@@ -1,3 +1,13 @@
+#no-hover {
+  user-select: none;
+}
+
+#custom-work {
+  text-align: center;
+  background-color: rgba(0,0,50,0.2);
+  border-radius: 5px;
+}
+
 #signature {
   user-select: none;
   width: 170px;
@@ -11,16 +21,6 @@
   bottom: 16px;
   color: #E6E0CC;
 }
-
-/*#to-blur {
-  position: absolute;
-  left: 100px;
-  top: 100px;
-
-  width: 50%;
-  height: 30px;
-  filter: blur(10px);
-}*/
 
 #main-nav {
   /*user-select: none;*/
@@ -103,13 +103,10 @@
   display: inline-block;
 }
 
-/*#main-nav:hover > canvas {
-  filter: blur(10px);
-}
+#main-nav:hover {
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
 
-#main-nav:active > canvas {
-  filter: blur(10px);
-}*/
+}
 
 #social-media-icon {
   color: #E6E0CD;

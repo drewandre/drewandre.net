@@ -19,7 +19,7 @@
   margin-top: -13px; /* 1/2 height */
 }
 
-.about {
+.tag {
   user-select: none;
   z-index: 10;
   position: relative;

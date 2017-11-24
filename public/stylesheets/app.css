@@ -7,16 +7,29 @@
 @import 'styles/home.css';
 @import 'styles/links.css';
 @import 'styles/menu.css';
+@import 'styles/about.css';
 
-body, html {
+html {
+  height: 100%;
+}
+
+body {
   font-family: 'Montserrat', Fallback, sans-serif;
   width: 100%;
   height: 100%;
-  padding: 0;
   margin: 0;
-  overflow: hidden;
   background-color: #292929;
 }
+
+/*main {
+  overflow: hidden;
+  height: 100%;
+}*/
+
+/*#allow-overflow {
+  height: 100%;
+  overflow: auto;
+}*/
 
 canvas {
   z-index: 0;
