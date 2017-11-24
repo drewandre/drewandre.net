@@ -3,6 +3,8 @@
 This template provides a basic [Sinatra](http://www.sinatrarb.com/) application
 that includes:
 
+`https://github.com/LaunchAcademy/sinatra-activerecord-starter-kit`
+
 - [Active Record](http://guides.rubyonrails.org/active_record_querying.html)
 using [sinatra-activerecord](https://github.com/janko-m/sinatra-activerecord)
 - [PostgreSQL](http://www.postgresql.org/) for a database
@@ -38,7 +40,7 @@ rake db:create
 ### Configuring Your Database
 
 Note the last two steps above. This template is set up for using a PostgreSQL database. You will need to create a
-`config/database.yml` for the application to connect to the database successfully. 
+`config/database.yml` for the application to connect to the database successfully.
 
 Once you've created and configured the `config/database.yml` file, you can create the database with the `rake db:create` command.
 
