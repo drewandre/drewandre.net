@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,700');
+
+/*@media only screen and (max-width: 500px) {
+  h1 { font-size: 5em; color: red; }
+}*/
+
+@import 'styles/home.css';
+@import 'styles/links.css';
+@import 'styles/menu.css';
+
+body, html {
+  font-family: 'Montserrat', Fallback, sans-serif;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background-color: #292929;
+}
+
+canvas {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: blur(1px);
+}

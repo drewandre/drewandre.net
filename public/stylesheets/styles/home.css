@@ -1,0 +1,32 @@
+.home-centered {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.name {
+  user-select: none;
+  z-index: 10;
+  position: relative;
+  color: #E6E0CC;
+  font-size: 5em;
+  font-weight: 100;
+  width: 100%;
+  height: fit-content;
+  margin-top: -13px; /* 1/2 height */
+}
+
+.about {
+  user-select: none;
+  z-index: 10;
+  position: relative;
+  color: #E6E0CC;
+  font-size: 2em;
+  font-weight: 300;
+  height: fit-content;
+  margin-top: -13px; /* 1/2 height */
+  text-align: center;
+}
