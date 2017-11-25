@@ -12,4 +12,8 @@ $(document).ready(function() {
     $('#main-nav > ul').slideToggle('fast');
   });
 
+  $('#main-nav ul li').on('click', function() {
+    event.stopPropagation();
+    $('#main-nav ul li ul'[0]).slideDown('fast');
+  });
 });
