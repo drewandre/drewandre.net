@@ -12,14 +12,14 @@
     <nav id='main-nav'>
       <div>
         <i class="fa fa-bars fa-2x" id='menu-icon' aria-hidden="true"></i>
-        <a href='/'><img id='signature' src='/images/signature.png'></img></a>
-      </div>
-      <div class='social-media-icon-list'>
-        <a href='https://www.linkedin.com/in/drewandre/' target="_blank"><i class="fa fa-linkedin-square fa-2x" id='social-media-icon' aria-hidden="true"></i></a>
-        <a href='https://www.instagram.com/_drewandre/' target="_blank"><i class="fa fa-instagram fa-2x" id='social-media-icon' aria-hidden="true"></i></a>
-        <a href='https://github.com/drewandre' target="_blank"><i class="fa fa-github-square fa-2x" id='social-media-icon' aria-hidden="true"></i></a>
+        <img id='signature' src='/images/signature.png'></img>
       </div>
       <ul>
+        <div class='social-media-icon-list'>
+          <a href='https://www.linkedin.com/in/drewandre/' target="_blank"><i class="fa fa-linkedin-square fa-3x" id='social-media-icon' aria-hidden="true"></i></a>
+          <a href='https://github.com/drewandre' target="_blank"><i class="fa fa-github-square fa-3x" id='social-media-icon' aria-hidden="true"></i></a>
+          <a href='https://www.instagram.com/_drewandre/' target="_blank"><i class="fa fa-instagram fa-3x" id='social-media-icon' aria-hidden="true"></i></a>
+        </div>
         <li><a href="/custom-installs" id='custom-work'>custom work inquiries</a></li>
         <li><a href="/">home</a></li>
         <li><a href="/about">about</a></li>
@@ -45,7 +45,7 @@
         </li>
       </ul>
     </nav>
-    <div id='below-nav'>
+    <div class='below-nav'>
     <% flash.each do |type, message| %>
         <div class="flash flash-<%= type %>">
           <%= message %>

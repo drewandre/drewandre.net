@@ -20,7 +20,7 @@
   function Grad(x, y) {
     this.x = x; this.y = y;
   }
-  
+
   Grad.prototype.dot = function(x, y) {
     return this.x*x + this.y*y;
   };
