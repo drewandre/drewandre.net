@@ -6,7 +6,7 @@ require 'sass/plugin/rack'
 
 enable :sessions
 
-set :bind, '0.0.0.0'  # bind to all interfaces
+set :bind, '0.0.0.0' # bind to all interfaces
 
 configure :development, :test do
   require 'pry'
@@ -45,31 +45,41 @@ get '/custom-installs' do
 end
 
 get '/work/web/palette' do
+  @title = 'Palette';
   @photo = 'palette_photo_here'
   erb :web_work
 end
 
 get '/work/web/reporev' do
+  @title = 'RepoRev';
   @photo = 'reporev_photo_here'
   erb :web_work
 end
 
 get '/work/lighting/aura' do
+  @title = 'Aura';
   @photo = 'palette_photo_here'
   erb :lighting_work
 end
 
 get '/work/lighting/boston' do
+  @title = 'Boston';
   @photo = 'palette_photo_here'
   erb :lighting_work
 end
 
-get '/work/lighting/back-bay' do
+get '/work/lighting/tremont-street' do
+  @title = 'Tremont Street';
   @photo = 'palette_photo_here'
   erb :lighting_work
 end
 
-get '/work/lighting/connecticut-college' do
+get '/work/lighting/winchester' do
+  @title = 'Winchester';
   @photo = 'palette_photo_here'
   erb :lighting_work
+end
+
+get '/*' do
+  erb :index
 end

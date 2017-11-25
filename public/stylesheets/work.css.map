@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,aAAc,CACZ,MAAM,CAAE,GAAG,CACX,KAAK,CAAE,GAAG,CACV,YAAY,CAAE,KAAK,CACnB,YAAY,CAAE,OAAO",
+"sources": ["sass/work.scss"],
+"names": [],
+"file": "work.css"
+}
