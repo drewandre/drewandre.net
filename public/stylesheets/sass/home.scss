@@ -13,11 +13,23 @@
   position: relative;
   color: #E6E0CC;
   font-size: 5em;
-  font-weight: 100;
+  font-weight: 200;
   width: 100%;
   height: fit-content;
   margin-top: -13px; /* 1/2 height */
+  text-shadow: 0px 0px 5px black;
+
 }
+
+// h1 {
+//   font: bold 200px arial, sans-serif;
+//   background-color: #565656;
+//   color: transparent;
+//   text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+//   -webkit-background-clip: text;
+//      -moz-background-clip: text;
+//           background-clip: text;
+// }
 
 .tag {
   user-select: none;
