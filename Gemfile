@@ -8,6 +8,7 @@ gem "sinatra", "~> 1.4"
 gem "sinatra-activerecord", "~> 2.0"
 gem "sinatra-contrib"
 gem "sinatra-flash"
+gem "webpacker", "~> 3.0"
 
 group :test, :development do
   gem "pry"

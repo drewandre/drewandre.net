@@ -1,0 +1,39 @@
+{
+  "name": "drewandre_net_sinatra_activerecord",
+  "version": "1.0.0",
+  "description": "personal portfolio w/ perlin noise examples",
+  "main": "index.js",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7"
+  },
+  "devDependencies": {
+    "babel-core": "^6.4.5",
+    "babel-loader": "^6.2.1",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "style-loader": "^0.19.0",
+    "webpack": "^1.12.12",
+    "webpack-devserver": "0.0.6",
+    "webpack-hot-middleware": "^2.20.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-devserver",
+    "build": "webpack --config webpack.config.js --progress --color --watch --display-error-details"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drewandre/drewandre.net.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Drew André",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drewandre/drewandre.net/issues"
+  },
+  "homepage": "https://github.com/drewandre/drewandre.net#readme"
+}
