@@ -63,7 +63,7 @@
 
 #main-nav {
   cursor:pointer;
-  user-select: none;
+  // user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -76,9 +76,7 @@
   border-radius: 5px;
 
   ul  {
-    pointer-events: all;
-    user-select: all;
-    cursor: pointer;
+    cursor:pointer;
   	list-style: none;
   	position: relative;
   	float: left;
@@ -90,8 +88,6 @@
     // height: 100%;
 
     a {
-      pointer-events: all;
-      user-select: all;
     	display: block;
     	color: $off-white;
     	text-decoration: none;
@@ -102,9 +98,7 @@
     }
 
     li {
-      pointer-events: all;
-      user-select: all;
-      // overflow: hidden;
+      overflow: hidden;
       border-radius: 5px;
     	margin: 0;
     	padding: 0;
@@ -113,7 +107,6 @@
 
     li:hover {
     	background-color: rgba(0,0,0,0.3);
-      background-color: red;
     }
 
     ul {
@@ -142,8 +135,6 @@
         // height: 100%;
 
         li {
-          pointer-events: all;
-          user-select: auto;
           display: block;
           padding: 0px;
           margin: 0px;
