@@ -1,5 +1,8 @@
 #no-active {
   user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 #main-nav:hover {
@@ -35,12 +38,18 @@
 
 #signature {
   user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
   width: 170px;
   margin-left: 5px;
 }
 
 #menu-icon {
   user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
   position: relative;
   bottom: 16px;
   color: $off-white;
@@ -48,6 +57,9 @@
 
 #main-nav {
   user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
   position: absolute;
   display: inline-grid;
   z-index: 20;
@@ -138,7 +150,3 @@
 #main-nav:hover > ul {
   display: inline-grid;
 }
-
-// #main-nav:active > .social-media-icon-list {
-//   display: inline-block;
-// }
