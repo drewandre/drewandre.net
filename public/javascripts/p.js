@@ -97,11 +97,11 @@ window.addEventListener("resize", function () {
   return reset();
 });
 
-nav.addEventListener("click", function () {
+nav.addEventListener("touchstart", function () {
   return pauseAnimation(!pausePerlin);
 });
 
-body.addEventListener("click", function () {
+body.addEventListener("touchstart", function () {
   return pauseAnimation(false);
 });
 
