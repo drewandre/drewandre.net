@@ -2,7 +2,8 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require 'sinatra/reloader'
 require 'sinatra/flash'
-# require 'pry'
+require 'sass'
+require 'sass/plugin/rack'
 
 enable :sessions
 
@@ -13,6 +14,8 @@ configure :development, :test do
 end
 
 configure do
+  Sass::Plugin.options[:style] = :compressed
+  use Sass::Plugin::Rack
   set :views, 'app/views'
 end
 

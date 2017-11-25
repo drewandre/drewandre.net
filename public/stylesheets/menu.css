@@ -1,0 +1,92 @@
+/*
+Error: Undefined variable: "$off-white".
+        on line 21 of ./public/stylesheets/sass/menu.scss
+
+16: 
+17: #menu-icon {
+18:   user-select: none;
+19:   position: relative;
+20:   bottom: 16px;
+21:   color: $off-white;
+22: }
+23: 
+24: #main-nav {
+25:   position: absolute;
+26:   display: inline-grid;
+
+Backtrace:
+./public/stylesheets/sass/menu.scss:21
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/script/tree/node.rb:50:in `perform'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `map'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/plugin.rb:82:in `update_stylesheets'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/plugin.rb:54:in `check_for_updates'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/plugin/rack.rb:51:in `call'
+/Users/drewandre/.gem/ruby/2.3.3/gems/rack-protection-2.0.0/lib/rack/protection/xss_header.rb:18:in `call'
+/Users/drewandre/.gem/ruby/2.3.3/gems/rack-protection-2.0.0/lib/rack/protection/base.rb:50:in `call'
+/Users/drewandre/.gem/ruby/2.3.3/gems/rack-protection-2.0.0/lib/rack/protection/base.rb:50:in `call'
+/Users/drewandre/.gem/ruby/2.3.3/gems/rack-protection-2.0.0/lib/rack/protection/path_traversal.rb:16:in `call'
+/Users/drewandre/.gem/ruby/2.3.3/gems/rack-protection-2.0.0/lib/rack/protection/json_csrf.rb:26:in `call'
+/Users/drewandre/.gem/ruby/2.3.3/gems/rack-protection-2.0.0/lib/rack/protection/base.rb:50:in `call'
+/Users/drewandre/.gem/ruby/2.3.3/gems/rack-protection-2.0.0/lib/rack/protection/base.rb:50:in `call'
+/Users/drewandre/.gem/ruby/2.3.3/gems/rack-protection-2.0.0/lib/rack/protection/frame_options.rb:31:in `call'
+/Users/drewandre/.gem/ruby/2.3.3/gems/rack-2.0.3/lib/rack/session/abstract/id.rb:232:in `context'
+/Users/drewandre/.gem/ruby/2.3.3/gems/rack-2.0.3/lib/rack/session/abstract/id.rb:226:in `call'
+/Users/drewandre/.gem/ruby/2.3.3/gems/rack-2.0.3/lib/rack/logger.rb:15:in `call'
+/Users/drewandre/.gem/ruby/2.3.3/gems/rack-2.0.3/lib/rack/common_logger.rb:33:in `call'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sinatra-2.0.0/lib/sinatra/base.rb:231:in `call'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sinatra-2.0.0/lib/sinatra/base.rb:224:in `call'
+/Users/drewandre/.gem/ruby/2.3.3/gems/rack-2.0.3/lib/rack/head.rb:12:in `call'
+/Users/drewandre/.gem/ruby/2.3.3/gems/rack-2.0.3/lib/rack/method_override.rb:22:in `call'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sinatra-2.0.0/lib/sinatra/show_exceptions.rb:22:in `call'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sinatra-2.0.0/lib/sinatra/base.rb:194:in `call'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sinatra-2.0.0/lib/sinatra/base.rb:1955:in `call'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sinatra-2.0.0/lib/sinatra/base.rb:1499:in `block in call'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sinatra-2.0.0/lib/sinatra/base.rb:1726:in `synchronize'
+/Users/drewandre/.gem/ruby/2.3.3/gems/sinatra-2.0.0/lib/sinatra/base.rb:1499:in `call'
+/Users/drewandre/.gem/ruby/2.3.3/gems/thin-1.6.2/lib/thin/connection.rb:86:in `block in pre_process'
+/Users/drewandre/.gem/ruby/2.3.3/gems/thin-1.6.2/lib/thin/connection.rb:84:in `catch'
+/Users/drewandre/.gem/ruby/2.3.3/gems/thin-1.6.2/lib/thin/connection.rb:84:in `pre_process'
+/Users/drewandre/.gem/ruby/2.3.3/gems/eventmachine-1.2.5/lib/eventmachine.rb:1076:in `call'
+/Users/drewandre/.gem/ruby/2.3.3/gems/eventmachine-1.2.5/lib/eventmachine.rb:1076:in `block in spawn_threadpool'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$off-white\".\A         on line 21 of ./public/stylesheets/sass/menu.scss\A \A 16: \A 17: #menu-icon {\A 18:   user-select: none;\A 19:   position: relative;\A 20:   bottom: 16px;\A 21:   color: $off-white;\A 22: }\A 23: \A 24: #main-nav {\A 25:   position: absolute;\A 26:   display: inline-grid;"; }
