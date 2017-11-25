@@ -13,6 +13,9 @@
 
 .name {
   user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
   z-index: 10;
   position: relative;
   color: #E6E0CC;
@@ -27,6 +30,9 @@
 
 .tag {
   user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
   z-index: 10;
   position: relative;
   color: #E6E0CC;

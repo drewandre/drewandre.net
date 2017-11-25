@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$off-white".
-        on line 24 of ./public/stylesheets/sass/home.scss
+        on line 27 of ./public/stylesheets/sass/home.scss
 
-19:   font-size: 5em;
-20:   font-weight: 300;
-21:   width: 100%;
-22:   height: fit-content;
-23:   margin-top: -13px; /* 1/2 height *\/
-24:   text-shadow: -1px 1px 2px $off-white;
-25: 
-26: }
-27: 
-28: .tag {
-29:   user-select: none;
+22:   font-size: 5em;
+23:   font-weight: 300;
+24:   width: 100%;
+25:   height: fit-content;
+26:   margin-top: -13px; /* 1/2 height *\/
+27:   text-shadow: -1px 1px 2px $off-white;
+28: 
+29: }
+30: 
+31: .tag {
+32:   user-select: none;
 
 Backtrace:
-./public/stylesheets/sass/home.scss:24
+./public/stylesheets/sass/home.scss:27
 /Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/script/tree/node.rb:50:in `perform'
 /Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/script/tree/list_literal.rb:75:in `block in _perform'
@@ -93,4 +93,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$off-white\".\A         on line 24 of ./public/stylesheets/sass/home.scss\A \A 19:   font-size: 5em;\A 20:   font-weight: 300;\A 21:   width: 100%;\A 22:   height: fit-content;\A 23:   margin-top: -13px; /* 1/2 height */\A 24:   text-shadow: -1px 1px 2px $off-white;\A 25: \A 26: }\A 27: \A 28: .tag {\A 29:   user-select: none;"; }
+  content: "Error: Undefined variable: \"$off-white\".\A         on line 27 of ./public/stylesheets/sass/home.scss\A \A 22:   font-size: 5em;\A 23:   font-weight: 300;\A 24:   width: 100%;\A 25:   height: fit-content;\A 26:   margin-top: -13px; /* 1/2 height */\A 27:   text-shadow: -1px 1px 2px $off-white;\A 28: \A 29: }\A 30: \A 31: .tag {\A 32:   user-select: none;"; }
