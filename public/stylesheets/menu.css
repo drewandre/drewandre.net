@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$off-white".
-        on line 16 of ./public/stylesheets/sass/menu.scss
+        on line 18 of ./public/stylesheets/sass/menu.scss
 
-11: }
-12: 
-13: #social-media-icon {
-14:   display: inline-block;
-15:   float: left;
-16:   color: $off-white;
-17:   padding: 0px 15px;
-18:   margin-bottom: 5px;
-19: }
-20: 
-21: #social-media-icon:hover {
+13: }
+14: 
+15: #social-media-icon {
+16:   display: inline-block;
+17:   float: left;
+18:   color: $off-white;
+19:   padding: 0px 19px;
+20:   margin-bottom: 5px;
+21: }
+22: 
+23: #social-media-icon:hover {
 
 Backtrace:
-./public/stylesheets/sass/menu.scss:16
+./public/stylesheets/sass/menu.scss:18
 /Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/script/tree/node.rb:50:in `perform'
 /Users/drewandre/.gem/ruby/2.3.3/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
@@ -89,4 +89,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$off-white\".\A         on line 16 of ./public/stylesheets/sass/menu.scss\A \A 11: }\A 12: \A 13: #social-media-icon {\A 14:   display: inline-block;\A 15:   float: left;\A 16:   color: $off-white;\A 17:   padding: 0px 15px;\A 18:   margin-bottom: 5px;\A 19: }\A 20: \A 21: #social-media-icon:hover {"; }
+  content: "Error: Undefined variable: \"$off-white\".\A         on line 18 of ./public/stylesheets/sass/menu.scss\A \A 13: }\A 14: \A 15: #social-media-icon {\A 16:   display: inline-block;\A 17:   float: left;\A 18:   color: $off-white;\A 19:   padding: 0px 19px;\A 20:   margin-bottom: 5px;\A 21: }\A 22: \A 23: #social-media-icon:hover {"; }

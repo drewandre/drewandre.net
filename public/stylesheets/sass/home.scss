@@ -3,6 +3,7 @@
 }
 
 .home-centered {
+  pointer-events: none;
   position: absolute;
   top: 30%;
   width: 100%;
@@ -12,6 +13,7 @@
 }
 
 .name {
+  pointer-events: none; 
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -29,6 +31,7 @@
 }
 
 .tag {
+  pointer-events: none; 
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;

@@ -1,15 +1,20 @@
 $(document).ready(function() {
   $('#main-nav > ul').hide();
 
-  $(document).on('touchstart', function(){
+  $('.below-nav').on('click', function(){
     $('#main-nav > ul').slideUp();
     $('.below-nav').removeClass( "canvas-blur" )
   });
 
-  $('#main-nav').on('touchstart', function() {
+  $('#menu').on('click', function() {
     event.stopPropagation();
-    $('.below-nav').toggleClass( "canvas-blur" )
+    $('.below-nav').toggleClass("canvas-blur" )
     $('#main-nav > ul').slideToggle('medium');
   });
+
+  // $('#main-nav > ul').on('click', function() {
+  //   // event.stopPropagation();
+  //   $('#main-nav > ul > ul').slideToggle('medium');
+  // });
 
 });
