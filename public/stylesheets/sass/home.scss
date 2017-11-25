@@ -13,7 +13,7 @@
 }
 
 .name {
-  pointer-events: none; 
+  pointer-events: none;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -26,12 +26,11 @@
   width: 100%;
   height: fit-content;
   margin-top: -13px; /* 1/2 height */
-  text-shadow: -1px 1px 2px $off-white;
-
+  // text-shadow: -1px 1px 2px $off-white;
 }
 
 .tag {
-  pointer-events: none; 
+  pointer-events: none;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -44,5 +43,5 @@
   height: fit-content;
   margin-top: -13px; /* 1/2 height */
   text-align: center;
-  text-shadow: -1px 1px 2px $off-white;
+  // text-shadow: -1px 1px 2px $off-white;
 }

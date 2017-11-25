@@ -76,7 +76,7 @@
   border-radius: 5px;
 
   ul  {
-    cursor:pointer;
+    cursor: pointer;
   	list-style: none;
   	position: relative;
   	float: left;
@@ -98,6 +98,8 @@
     }
 
     li {
+      pointer-events: all;
+      user-select: auto;
       overflow: hidden;
       border-radius: 5px;
     	margin: 0;
@@ -110,6 +112,8 @@
     }
 
     ul {
+      pointer-events: all;
+      user-select: auto;
     	display: none;
       padding: 0px;
       margin: 0;
@@ -125,6 +129,8 @@
       // }
 
       li {
+        pointer-events: all;
+        user-select: auto;
         position: relative;
         left: 0;
         right: 0;
@@ -135,6 +141,8 @@
         // height: 100%;
 
         li {
+          pointer-events: all;
+          user-select: auto;
           display: block;
           padding: 0px;
           margin: 0px;
