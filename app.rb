@@ -2,7 +2,6 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require 'sinatra/reloader'
 require 'sinatra/flash'
-require 'sass'
 require 'sass/plugin/rack'
 
 enable :sessions
@@ -14,6 +13,7 @@ configure :development, :test do
 end
 
 configure do
+  ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
   Sass::Plugin.options[:style] = :compressed
   use Sass::Plugin::Rack
   set :views, 'app/views'
