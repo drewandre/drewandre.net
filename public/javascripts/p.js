@@ -94,6 +94,10 @@ canvas.addEventListener("click", function () {
   return pauseAnimation(false);
 });
 
+canvas.addEventListener("touchstart", function (e) {
+  e.preventDefault();
+});
+
 f = function() {
   raf(f);
   return draw();
