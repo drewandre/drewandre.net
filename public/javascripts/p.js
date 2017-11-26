@@ -92,15 +92,18 @@ menu.addEventListener("click", function () {
 
 canvas.addEventListener("click", function () {
   e.preventDefault();
+  e.stopPropagation();
   return pauseAnimation(false);
 });
 
 canvas.addEventListener("touchstart", function (e) {
   e.preventDefault();
+  e.stopPropagation();
 });
 
 canvas.addEventListener("touchstart", function (e) {
   e.preventDefault();
+  e.stopPropagation();
 });
 
 f = function() {
