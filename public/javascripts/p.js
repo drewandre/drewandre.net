@@ -1,6 +1,7 @@
 var TAU, button, canvas, ctx, draw, f, fpselem, h, p1, particles, period, raf, w, _i, menu, pausePerlin = false;
 var lastResize = 0;
 canvas = document.getElementsByTagName('canvas')[0];
+below_nav = document.getElementsByClassName('below-nav')[0];
 menu = document.getElementById('menu');
 nav = document.getElementsByTagName('nav')[0];
 fpselem = document.getElementById('fps');
@@ -101,7 +102,17 @@ canvas.addEventListener("touchstart", function (e) {
   e.stopPropagation();
 });
 
-canvas.addEventListener("touchstart", function (e) {
+canvas.addEventListener("click", function (e) {
+  e.preventDefault();
+  e.stopPropagation();
+});
+
+below_nav.addEventListener("touchstart", function (e) {
+  e.preventDefault();
+  e.stopPropagation();
+});
+
+below_nav.addEventListener("click", function (e) {
   e.preventDefault();
   e.stopPropagation();
 });
