@@ -91,7 +91,12 @@ menu.addEventListener("click", function () {
 });
 
 canvas.addEventListener("click", function () {
+  e.preventDefault();
   return pauseAnimation(false);
+});
+
+canvas.addEventListener("touchstart", function (e) {
+  e.preventDefault();
 });
 
 canvas.addEventListener("touchstart", function (e) {
