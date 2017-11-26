@@ -2,6 +2,7 @@ $(document).ready(function() {
   $('#main-nav > ul').hide();
 
   $('.below-nav').on('click', function(){
+    event.stopPropagation();
     $('#main-nav > ul').slideUp('fast');
     $('.below-nav').removeClass( "canvas-blur" )
   });
