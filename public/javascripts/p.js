@@ -82,16 +82,16 @@ raf = window.requestAnimationFrame || window.webkitRequestAnimationFrame || wind
   return window.setTimeout(callback, 1000 / 60);
 };
 
-window.addEventListener("resize", function () {
+window.addEventListener("resize", function (e) {
   lastResize = Date.now();
   return reset();
 });
 
-menu.addEventListener("click", function () {
+menu.addEventListener("click", function (e) {
   return pauseAnimation(!pausePerlin);
 });
 
-canvas.addEventListener("click", function () {
+canvas.addEventListener("click", function (e) {
   e.preventDefault();
   e.stopPropagation();
   return pauseAnimation(false);
