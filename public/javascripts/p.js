@@ -93,29 +93,29 @@ menu.addEventListener("click", function (e) {
 
 canvas.addEventListener("click", function (e) {
   e.preventDefault();
-  e.stopPropagation();
+  // e.stopPropagation();
   return pauseAnimation(false);
 });
 
-canvas.addEventListener("touchstart", function (e) {
-  e.preventDefault();
-  e.stopPropagation();
-});
+// canvas.addEventListener("touchstart", function (e) {
+//   e.preventDefault();
+//   e.stopPropagation();
+// });
 
-canvas.addEventListener("click", function (e) {
-  e.preventDefault();
-  e.stopPropagation();
-});
+// canvas.addEventListener("click", function (e) {
+//   e.preventDefault();
+//   e.stopPropagation();
+// });
 
-below_nav.addEventListener("touchstart", function (e) {
-  e.preventDefault();
-  e.stopPropagation();
-});
-
-below_nav.addEventListener("click", function (e) {
-  e.preventDefault();
-  e.stopPropagation();
-});
+// below_nav.addEventListener("touchstart", function (e) {
+//   e.preventDefault();
+//   e.stopPropagation();
+// });
+//
+// below_nav.addEventListener("click", function (e) {
+//   e.preventDefault();
+//   e.stopPropagation();
+// });
 
 f = function() {
   raf(f);
