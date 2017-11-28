@@ -1,3 +1,7 @@
+document.ontouchstart = function(e){
+  e.preventDefault();
+}
+
 $(document).ready(function() {
   $('#main-nav > ul').hide();
 });

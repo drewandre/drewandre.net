@@ -44,6 +44,18 @@ get '/custom-installs' do
   erb :custom_installs
 end
 
+get '/work/web' do
+  @title = 'Web';
+  @photo = 'palette_photo_here'
+  erb :web_work
+end
+
+get '/work/lighting' do
+  @title = 'Lighting';
+  @photo = 'palette_photo_here'
+  erb :lighting_work
+end
+
 get '/work/web/palette' do
   @title = 'Palette';
   @photo = 'palette_photo_here'
