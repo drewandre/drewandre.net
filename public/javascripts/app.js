@@ -1,8 +1,8 @@
 $(document).on('touchmove', function(e) {
-    e.preventDefault();
+  e.preventDefault();
 });
 
-// $('html, body').scrollTop(1);
+$('html, body').scrollTop(1);
 
 $(document).ready(function() {
   $('#main-nav > ul').hide();
