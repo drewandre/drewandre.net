@@ -18,7 +18,7 @@ particles = [];
 for (_i = 1; _i <= 2000; _i++) {
   p1 = {
     x: w * 0.25 + Math.random() * w * 0.5,
-    y: h * 0.25 + Math.random() * h * 0.5,
+    y: h * 0.4 + Math.random() * h * 0.2,
     a: 0
   };
   particles.push(p1);
@@ -62,7 +62,7 @@ reset = function() {
   for (_i = 1; _i <= 2000; _i++) {
     p1 = {
       x: w * 0.25 + Math.random() * w * 0.5,
-      y: h * 0.25 + Math.random() * h * 0.5,
+      y: h * 0.4 + Math.random() * h * 0.2,
       a: 0
     };
     particles.push(p1);

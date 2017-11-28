@@ -9,17 +9,12 @@ $background-color: #292929;
 @import 'about';
 @import 'work';
 
-html {
-  height: 100%;
-}
-
-body {
+body, html {
   font-family: 'Montserrat', Fallback, sans-serif;
   width: 100%;
   height: 100%;
   margin: 0;
   background-color: $background-color;
-  overflow: hidden;
 }
 
 canvas {
@@ -27,6 +22,7 @@ canvas {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
   height: 100%;
 }
 

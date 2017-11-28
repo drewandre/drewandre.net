@@ -61,6 +61,7 @@
 }
 
 #main-nav {
+  position: absolute;
   cursor:pointer;
   display: inline-grid;
   z-index: 60;
@@ -137,7 +138,3 @@
 #main-nav:hover > ul {
   display: inline-grid;
 }
-
-// #menu:hover > #main-nav ul {
-//   display: inline-grid;
-// }
