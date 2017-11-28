@@ -1,12 +1,17 @@
+@mixin no-user-select($user-select: none) {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
 #no-hover {
   cursor: default;
-  // user-select: none;
-  // -moz-user-select: none;
-  // -webkit-user-select: none;
-  // -ms-user-select: none;
 }
 
 #menu {
+  z-index: 60;
+  user-select: none;
   padding-left: 15px;
   padding-top: 7px;
 }
@@ -38,19 +43,13 @@
 }
 
 #signature {
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
+  @include no-user-select();
   width: 170px;
   margin-left: 5px;
 }
 
 #menu-icon {
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
+  @include no-user-select();
   position: relative;
   bottom: 16px;
   color: $off-white;
@@ -63,13 +62,8 @@
 
 #main-nav {
   cursor:pointer;
-  // user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  position: absolute;
   display: inline-grid;
-  z-index: 20;
+  z-index: 60;
   margin: 20px;
   width: 240px;
   background-color: rgba(255,255,255,0.05);
@@ -77,6 +71,7 @@
 
   ul  {
     cursor:pointer;
+    z-index: 50;
   	list-style: none;
   	position: relative;
   	float: left;
@@ -85,7 +80,6 @@
     padding-top: 5px;
     padding-bottom: 15px;
     width: 220px;
-    // height: 100%;
 
     a {
     	display: block;
@@ -114,15 +108,7 @@
       padding: 0px;
       margin: 0;
       padding: 0;
-      // text-align: center;
       width: 100%;
-      // height: 100%;
-      // background-color: green;
-
-      // a {
-      //   height: 100%;
-      //   background-color: blue;
-      // }
 
       li {
         position: relative;
@@ -132,7 +118,6 @@
         padding: 0px;
         margin: 0px;
       	width: 50%;
-        // height: 100%;
 
         li {
           display: block;
@@ -140,11 +125,8 @@
           margin: 0px;
           width: 100%;
         }
-
       }
-
     }
-
   }
 }
 
@@ -152,10 +134,10 @@
 	display: block;
 }
 
-// #main-nav:hover > ul {
-//   display: inline-grid;
-// }
-
-#menu:hover > #main-nav ul {
+#main-nav:hover > ul {
   display: inline-grid;
 }
+
+// #menu:hover > #main-nav ul {
+//   display: inline-grid;
+// }
