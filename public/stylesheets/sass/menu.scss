@@ -152,6 +152,10 @@
 	display: block;
 }
 
-#main-nav:hover > ul {
+// #main-nav:hover > ul {
+//   display: inline-grid;
+// }
+
+#menu:hover > #main-nav ul {
   display: inline-grid;
 }
