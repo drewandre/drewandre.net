@@ -1,4 +1,4 @@
-require 'sinatra/base'
+require 'sinatra'
 require 'sinatra/activerecord'
 require 'sinatra/reloader'
 require 'sinatra/flash'
@@ -23,7 +23,6 @@ helpers do
     end
     return images
   end
-
 end
 
 enable :sessions
