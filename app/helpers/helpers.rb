@@ -31,7 +31,6 @@ helpers do
           <img class='work-tile' src='/projects/#{folder}/#{project}/#{file}' alt='#{title}'/>
           <div id='work-text'>
             <h4>#{description['title']}</h4>
-            <h5>#{description['description']}</h5>
           </div>
         </div>
       </a>"

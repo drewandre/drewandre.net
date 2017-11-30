@@ -47,10 +47,10 @@
 .work-wrapper {
   position: absolute;
   text-align: center;
-  top: 200px;
+  top: 220px;
   left: 0;
   width: 100%;
-  height: calc(100% - 200px);
+  height: calc(100% - 220px);
   overflow: scroll;
 }
 
@@ -88,4 +88,10 @@
   font-size: 2em;
   color: #E6E0CC;
   overflow: hidden;
+}
+
+#description {
+  margin: 20px;
+  font-size: 1.5em;
+  color: #E6E0CC;
 }
