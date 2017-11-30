@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<div class='work-wrapper'>
+<div class='centered'>
   <div id='work'><%= @title %></div>
   <div id='category'><%= @subtitle %></div>
   <hr id='work-example'/>
+</div>
+<div class='work-wrapper'>
   <% @photos.each do |photo| %>
     <%= photo %>
   <% end %>
