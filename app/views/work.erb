@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<div class='work-wrapper'>
+  <div id='work'><%= @title %></div>
+  <div id='category'><%= @subtitle %></div>
+  <hr id='work-example'/>
+  <% @photos.each do |photo| %>
+    <%= photo %>
+  <% end %>
+</div>
