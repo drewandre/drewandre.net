@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <div class='centered'>
-  <div id='work'><%= @title %></div>
+  <div id='work'><%= @title %>&nbsp;</div>
   <div id='category'><%= @subtitle %></div>
   <hr id='work-example'/>
+  <div id='description'><%= @description['description'] %></div>
 </div>
 <div class='work-wrapper'>
   <% @photos.each do |photo| %>
