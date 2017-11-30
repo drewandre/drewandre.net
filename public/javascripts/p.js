@@ -9,13 +9,17 @@ w = canvas.width = document.body.clientWidth;
 h = canvas.height = document.body.clientHeight;
 TAU = 2 * Math.PI;
 ctx = canvas.getContext('2d');
-period = 1 / 500;
+// ctx.shadowColor = "black";
+// ctx.shadowOffsetX = 0;
+// ctx.shadowOffsetY = 0;
+// ctx.shadowBlur = 3;
+period = 1 / 650;
 
 noise.seed(Math.random());
 
 particles = [];
 
-for (_i = 1; _i <= 2000; _i++) {
+for (_i = 1; _i <= 1000; _i++) {
   p1 = {
     x: w * 0.25 + Math.random() * w * 0.5,
     y: h * 0.4 + Math.random() * h * 0.2,
@@ -39,6 +43,10 @@ draw = function() {
         v = noise.perlin2(p.x * period, p.y * period);
         p.h++;
         ctx.fillStyle = "hsla(" + (Math.floor(v * 360)) + ", 100%, 80%, 0.2)";
+        ctx.shadowColor = "black";
+        ctx.shadowOffsetX = 3;
+        ctx.shadowOffsetY = 3;
+        ctx.shadowBlur = 3;
         ctx.fillRect(p.x, p.y, 1, 1);
         a = v * 2.5 * Math.PI + p.a;
         p.x += Math.cos(a);
@@ -59,7 +67,7 @@ reset = function() {
   period = 1 / 500;
   noise.seed(Math.random());
   particles = [];
-  for (_i = 1; _i <= 2000; _i++) {
+  for (_i = 1; _i <= 1000; _i++) {
     p1 = {
       x: w * 0.25 + Math.random() * w * 0.5,
       y: h * 0.4 + Math.random() * h * 0.2,
@@ -96,26 +104,6 @@ canvas.addEventListener("click", function (e) {
   // e.stopPropagation();
   return pauseAnimation(false);
 });
-
-// canvas.addEventListener("touchstart", function (e) {
-//   e.preventDefault();
-//   e.stopPropagation();
-// });
-
-// canvas.addEventListener("click", function (e) {
-//   e.preventDefault();
-//   e.stopPropagation();
-// });
-
-// below_nav.addEventListener("touchstart", function (e) {
-//   e.preventDefault();
-//   e.stopPropagation();
-// });
-//
-// below_nav.addEventListener("click", function (e) {
-//   e.preventDefault();
-//   e.stopPropagation();
-// });
 
 f = function() {
   raf(f);
