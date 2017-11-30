@@ -3,7 +3,6 @@ require 'sinatra/activerecord'
 require 'sinatra/reloader'
 require 'sinatra/flash'
 require 'sass/plugin/rack'
-require 'pry'
 
 helpers do
   def img(category, name)
