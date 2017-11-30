@@ -43,10 +43,10 @@ draw = function() {
         v = noise.perlin2(p.x * period, p.y * period);
         p.h++;
         ctx.fillStyle = "hsla(" + (Math.floor(v * 360)) + ", 100%, 80%, 0.2)";
-        ctx.shadowColor = "black";
-        ctx.shadowOffsetX = 3;
-        ctx.shadowOffsetY = 3;
-        ctx.shadowBlur = 3;
+        // ctx.shadowColor = "black";
+        // ctx.shadowOffsetX = 3;
+        // ctx.shadowOffsetY = 3;
+        // ctx.shadowBlur = 3;
         ctx.fillRect(p.x, p.y, 1, 1);
         a = v * 2.5 * Math.PI + p.a;
         p.x += Math.cos(a);
