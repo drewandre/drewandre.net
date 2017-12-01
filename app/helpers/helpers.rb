@@ -27,12 +27,10 @@ helpers do
     title = File.basename(file,File.extname(file)).gsub(/[_-]/, ' ').split.map(&:capitalize).join(' ')
     return (
       "<a class='work-link' href='#{folder}/#{project}'>
-        <div class='work-image'>
-          <img class='work-tile' src='/projects/#{folder}/#{project}/#{file}' alt='#{title}'/>
-          <div id='work-text'>
-            <h4>#{description['title']}</h4>
-          </div>
+        <div class='work-text'>
+          <h4>#{description['title']}</h4>
         </div>
+        <img class='work-tile' src='/projects/#{folder}/#{project}/#{file}' alt='#{title}'/>
       </a>"
     )
   end
