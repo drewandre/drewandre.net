@@ -105,7 +105,7 @@ menu.addEventListener("mouseleave", function (e) {
   // return pauseAnimation(!pausePerlin);
 });
 
-below_nav.addEventListener("click touch", function () {
+below_nav.addEventListener("click", function () {
   return pauseAnimation(false);
 });
 
