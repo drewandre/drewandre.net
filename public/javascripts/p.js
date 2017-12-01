@@ -105,7 +105,7 @@ menu.addEventListener("mouseleave", function (e) {
   // return pauseAnimation(!pausePerlin);
 });
 
-canvas.addEventListener("click", function (e) {
+canvas.addEventListener("touchstart", function (e) {
   e.preventDefault();
   return pauseAnimation(false);
 });
