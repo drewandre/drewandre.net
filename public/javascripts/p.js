@@ -2,7 +2,7 @@ var TAU, button, canvas, ctx, draw, f, fpselem, h, p1, particles, period, raf, w
 var lastResize = 0;
 canvas = document.getElementsByTagName('canvas')[0];
 below_nav = document.getElementsByClassName('below-nav')[0];
-menu = document.getElementById('menu');
+menu = document.getElementById('main-nav');
 nav = document.getElementsByTagName('nav')[0];
 fpselem = document.getElementById('fps');
 w = canvas.width = document.body.clientWidth;
@@ -95,13 +95,18 @@ window.addEventListener("resize", function (e) {
   return reset();
 });
 
-menu.addEventListener("click", function (e) {
-  return pauseAnimation(!pausePerlin);
+menu.addEventListener("mouseenter", function (e) {
+  return pauseAnimation(true);
+  // return pauseAnimation(!pausePerlin);
+});
+
+menu.addEventListener("mouseleave", function (e) {
+  return pauseAnimation(false);
+  // return pauseAnimation(!pausePerlin);
 });
 
 canvas.addEventListener("click", function (e) {
   e.preventDefault();
-  // e.stopPropagation();
   return pauseAnimation(false);
 });
 
