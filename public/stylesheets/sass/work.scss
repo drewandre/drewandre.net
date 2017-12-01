@@ -32,6 +32,7 @@
 
 .work-wrapper {
   @include no-user-select();
+  z-index: 20;
   position: absolute;
   text-align: center;
   top: 220px;
@@ -50,35 +51,30 @@
   max-width: 800px;
   max-height: 400px;
   overflow: hidden;
+  // height: 400px;
 }
 
-#work-text {
-  text-align: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.65);
+.work-text {
+  z-index: 20;
+  @include center();
   width: 100%;
-  max-width: 800px;
-  max-height: 400px;
   font-size: 3em;
   color: $off-white;
-  display: none;
-  overflow: hidden;
+  display: table;
 }
 
-#work-text {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  font-size: 2em;
-  color: $off-white;
-  overflow: hidden;
+.work-text h4 {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
 }
 
 #description {
   margin: 20px;
   font-size: 1.5em;
   color: $off-white;
+}
+
+.image-darken {
+  filter: brightness(50%);
 }
