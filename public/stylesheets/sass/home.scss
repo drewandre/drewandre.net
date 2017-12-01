@@ -1,25 +1,10 @@
-@mixin vertical-align($position: absolute) {
-  position: $position;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-@mixin no-user-select($user-select: none) {
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-}
+@import 'mixins';
+@import 'colors';
 
 .canvas-blur {
   pointer-events: none;
   filter: blur(25px);
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
+  @include no-user-select();
 }
 
 .home-centered {
@@ -35,7 +20,7 @@
   margin: 0;
   pointer-events: none;
   position: relative;
-  color: #E6E0CC;
+  color: $off-white;
   font-size: 5em;
   font-weight: 300;
   height: fit-content;
@@ -45,7 +30,7 @@
 .tag {
   @include no-user-select();
   margin: 0;
-  color: #E6E0CC;
+  color: $off-white;
   font-size: 2em;
   font-weight: 400;
   height: fit-content;
@@ -54,7 +39,7 @@
 }
 
 #notice {
-  color: #292929;
+  color: $main-background-color;
   text-align: center;
   position: absolute;
   left: 20px;
