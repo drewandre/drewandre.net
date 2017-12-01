@@ -1,2 +1,6 @@
 title: "drew-andre.com"
-description: "Portfolio built with sass styling and generative canvas art"
+short-description: "Personal portfolio"
+full-description: "This portfolio places emphasis on clean sass styling and the ability to quickly add new examples of your work. The generative art on the home screen is based of off perlin noise and vector flow fields. To add a new lighting project, simply add a photo to /public/lighting/*project-name*, and add a formatted yml document with the project title/description/tools/etc."
+tools: "Sinatra, SASS, PostgreSQL"
+libraries: "Particle library"
+github-link: "https://github.com/drewandre/drewandre.net"

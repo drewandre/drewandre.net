@@ -1,2 +1,6 @@
 title: "Palette"
-description: "Smart LED controller for use with Philips Hue bulbs"
+short-description: "Smart LED controller - WORK IN PROGRESS"
+full-description: "Palette allows users to have control over one, or many smart lighting products. Users can design color palettes on a React front end, or drop a photo onto the screen to automatically create a color palette. Users can also tap into real-time API date to influence lighting parameters throughout the day."
+tools: "Ruby on Rails, React.js, PostgreSQL"
+libraries: "Vibrant.js, Huey"
+github-link: "https://github.com/drewandre/palette"

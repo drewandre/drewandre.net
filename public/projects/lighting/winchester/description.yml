@@ -1,2 +1,6 @@
-title: "Winchester Road, New London"
-description: "Lighting system with audio reactive and dynamic mood lighting effects"
+title: "Winchester"
+short-description: "Home recessed lighting system with audio reactive effects"
+full-description: "This system is a custom installation in New London, Connecticut. Client can choose between several audio reactive effects (full stereo), as well as dynamic mood lighting effects with over two dozen color palettes."
+tools: "Arduino MEGA, MSGEQ7 analyzer (stereo), WS2812B LED strips (60/m), 5W 60AMP power supply"
+libraries: "FastLED"
+github-link: "https://github.com/drewandre/winchester"

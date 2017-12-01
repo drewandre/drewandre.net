@@ -4,7 +4,7 @@ helpers do
   def img(folder, file)
     title = File.basename(file,File.extname(file)).gsub(/[_-]/, ' ').split.map(&:capitalize).join(' ')
     return (
-      "<div class='work-link'>
+      "<div class='work-static'>
         <img class='work-tile' src='/projects/#{folder}/#{file}' alt='#{title}'/>
       </div>"
     )
