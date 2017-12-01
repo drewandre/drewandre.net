@@ -1,2 +1,6 @@
 title: "RepoRev"
-description: "GitHub repository review app"
+short-description: "GitHub repository review app"
+full-description: "RepoRev takes advantage of GitHub's V3 API, and allows users to search for, comment on, and rate repositories."
+tools: "Ruby on Rails, React.js, PostgreSQL"
+libraries: "jQuery"
+github-link: "https://github.com/drewandre/reporev"
