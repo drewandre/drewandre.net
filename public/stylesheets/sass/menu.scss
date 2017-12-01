@@ -11,7 +11,7 @@
 
 #menu {
   z-index: 60;
-  // user-select: none;
+  @include no-user-select();
   padding-left: 15px;
   padding-top: 7px;
 }
@@ -61,6 +61,7 @@
 }
 
 #main-nav:before {
+  @include no-user-select();
   content: '';
   width: calc(100% + 100px);
   height: calc(100% + 100px);
@@ -72,6 +73,7 @@
 
 #main-nav {
   position: absolute;
+  @include no-user-select();
   cursor:pointer;
   display: inline-grid;
   z-index: 60;
@@ -81,6 +83,7 @@
   border-radius: 5px;
 
   ul  {
+    @include no-user-select();
     cursor:pointer;
     z-index: 50;
   	list-style: none;

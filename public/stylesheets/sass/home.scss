@@ -16,6 +16,10 @@
 .canvas-blur {
   pointer-events: none;
   filter: blur(25px);
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .home-centered {
