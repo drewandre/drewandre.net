@@ -1,9 +1,5 @@
-@mixin no-user-select($user-select: none) {
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-}
+@import 'mixins';
+@import 'colors';
 
 #no-hover {
   cursor: default;
@@ -38,7 +34,7 @@
 #custom-work {
   text-align: center;
   width: 210px;
-  background-color: #1D1D26;
+  background-color: $cta;
   border-radius: 5px;
 }
 
@@ -46,6 +42,19 @@
   @include no-user-select();
   width: 170px;
   margin-left: 5px;
+  text-shadow: 2px 2px 3px red;
+  -webkit-filter: none;
+  filter: none;
+
+}
+
+#signature:hover {
+  // filter: brightness(1.25);
+  -webkit-filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.7));
+  filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.7));
+  // -webkit-transform: translateY(-1%) translateX(1%);
+  // -ms-transform: translateY(-1%) translateX(1%);
+  // transform: translateY(-1%) translateX(1%);
 }
 
 #menu-icon {
@@ -74,7 +83,7 @@
 #main-nav {
   position: absolute;
   @include no-user-select();
-  cursor:pointer;
+  cursor: pointer;
   display: inline-grid;
   z-index: 60;
   margin: 20px;
