@@ -16,7 +16,7 @@ helpers do
       next if file == '.' or file == '..'
       description = YAML::load_file "public/projects/#{folder}/description.yml"
       case File.extname(file)
-      when '.jpg', '.jpeg', '.png', '.gif', '.bmp', '.tiff'
+      when '.jpg', '.JPG', '.jpeg', '.png', '.gif', '.bmp', '.tiff'
         images.push(img(folder, file))
       end
     end
