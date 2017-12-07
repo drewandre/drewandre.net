@@ -7,7 +7,9 @@
   <p class='work-info'><strong>Description:</strong>&nbsp;&nbsp;<%= @description['full-description']%></p>
   <p class='work-info'><strong>Tools:</strong>&nbsp;&nbsp;<%= @description['tools']%></p>
   <p class='work-info'><strong>Libraries:</strong>&nbsp;&nbsp;<%= @description['libraries']%></p>
-  <a class='work-info' target="_blank" href=<%= @description['github-link']%>><strong>GitHub</strong></a>
+  <% if @description['github-link'] %>
+    <a class='work-info' target="_blank" href=<%= @description['github-link']%>><strong>GitHub</strong></a>
+  <% end %>
   <div class='work-wrapper'>
     <% @photos.each do |photo| %>
       <%= photo %>

@@ -1,0 +1,6 @@
+title: "Pendant"
+short-description: "Audio reactive LED pendant"
+full-description: "This is a work in progress - battery is hidden."
+tools: "Arduino Uno, MSGEQ7 analyzer (stereo), WS2812B LED ring, 5v LIPO battery"
+libraries: "FastLED"
+github-link: null

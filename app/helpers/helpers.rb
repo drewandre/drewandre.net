@@ -10,17 +10,30 @@ helpers do
     )
   end
 
-  def gather_all_images_from(folder)
-    images = []
+  def vid(folder, file)
+    title = File.basename(file,File.extname(file)).gsub(/[_-]/, ' ').split.map(&:capitalize).join(' ')
+    return (
+      "<div class='work-static'>
+        <video controls width='100%'>
+          <source src='/projects/#{folder}/#{file}' alt='#{title}' type='video/mp4'>
+        </video>
+      </div>"
+    )
+  end
+
+  def gather_all_media_from(folder)
+    media = []
     Dir.foreach("public/projects/#{folder}") do |file|
       next if file == '.' or file == '..'
       description = YAML::load_file "public/projects/#{folder}/description.yml"
       case File.extname(file)
       when '.jpg', '.JPG', '.jpeg', '.png', '.gif', '.bmp', '.tiff'
-        images.push(img(folder, file))
+        media.push(img(folder, file))
+      when '.mp4'
+        media.push(vid(folder, file))
       end
     end
-    return images
+    return media
   end
 
   def top_img(folder, project, file, description)

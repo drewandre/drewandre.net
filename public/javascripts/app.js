@@ -2,22 +2,49 @@ $(function() {
 	$('#main-nav > ul').hide();
 	$('.work-text').hide();
 
+	// TODO
 	// $(window).scroll(function(i) {
 	// 	var scrollVar = $(window).scrollTop();
 	// 	$('#main-nav').css({ opacity: (150 - scrollVar * 0.1) / 100 });
 	// });
 
-	$('.below-nav').on('click', function(e) {
+	$('.below-nav').on('touchstart', function(e) {
 		e.stopPropagation();
 		$('#main-nav > ul').slideUp('fast');
 		$('.main').removeClass('canvas-blur');
 	});
 
-	$('#main-nav').on('mouseenter mouseleave', function(e) {
-		e.stopPropagation();
+	// TODO
+	// $('#menu-icon').on('click', function(e) {
+	// 	e.stopPropagation();
+	// 	$('#main-nav > ul').slideUp('fast');
+	// 	$('.main').removeClass('canvas-blur');
+	// });
+
+	$('#main-nav').on('mouseenter', function(e) {
+		// clearTimeout($('#main-nav').data('timeout'));
+		// var t = setTimeout(function() {
+		$('#main-nav > ul').slideDown('fast');
+		$('.main').addClass('canvas-blur');
+		// }, 200);
+		// $('.home').data('timeout', t);
+
 		// $('#main-nav').css({ opacity: 1 });
-		$('#main-nav > ul').slideToggle('fast');
-		$('.main').toggleClass('canvas-blur');
+		// $('#main-nav > ul').slideToggle('fast');
+		// $('.main').toggleClass('canvas-blur');
+	});
+
+	$('#main-nav').on('mouseleave', function(e) {
+		clearTimeout($('#main-nav').data('timeout'));
+		var t = setTimeout(function() {
+			$('#main-nav > ul').slideUp('fast');
+			$('.main').removeClass('canvas-blur');
+		}, 200);
+		$('.home').data('timeout', t);
+
+		// $('#main-nav').css({ opacity: 1 });
+		// $('#main-nav > ul').slideToggle('fast');
+		// $('.main').toggleClass('canvas-blur');
 	});
 
 	$('#main-nav ul li').on('click', function(e) {
@@ -46,6 +73,18 @@ $(function() {
 				.toggleClass('image-darken');
 		});
 	});
+
+	// $('video')
+	// 	.off('play')
+	// 	.on('play', function() {
+	// 		var dd = this.id;
+	// 		$('video').each(function(index) {
+	// 			if (dd != this.id) {
+	// 				this.pause();
+	// 				this.currentTime = 0;
+	// 			}
+	// 		});
+	// 	});
 
 	// to allow :active styles to work on Mobile Safari
 	document.addEventListener('touchstart', function() {}, true);
