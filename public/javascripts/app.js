@@ -2,16 +2,22 @@ $(function() {
 	$('#main-nav > ul').hide();
 	$('.work-text').hide();
 
+	// $(window).scroll(function(i) {
+	// 	var scrollVar = $(window).scrollTop();
+	// 	$('#main-nav').css({ opacity: (150 - scrollVar * 0.1) / 100 });
+	// });
+
 	$('.below-nav').on('click', function(e) {
 		e.stopPropagation();
 		$('#main-nav > ul').slideUp('fast');
-		$('.below-nav').removeClass('canvas-blur');
+		$('.main').removeClass('canvas-blur');
 	});
 
 	$('#main-nav').on('mouseenter mouseleave', function(e) {
 		e.stopPropagation();
-		$('.below-nav').toggleClass('canvas-blur');
+		// $('#main-nav').css({ opacity: 1 });
 		$('#main-nav > ul').slideToggle('fast');
+		$('.main').toggleClass('canvas-blur');
 	});
 
 	$('#main-nav ul li').on('click', function(e) {

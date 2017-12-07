@@ -14,14 +14,13 @@ img {
 }
 
 #social-media-icon {
-	// @include start_icon_transition();
+	color: $off-white;
 	display: inline-block;
 	opacity: 0.5;
 	padding: 0px 15px;
 }
 
 #social-media-icon:hover {
-	// @include end_icon_transition();
 	opacity: 1;
 	text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
 }
