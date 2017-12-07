@@ -1,0 +1,57 @@
+@import 'colors';
+@import 'mixins';
+
+.contact-form {
+	margin: 50px auto;
+	width: 50%;
+	max-width: 500px;
+	display: inline-block;
+}
+
+#contact-input[type='text'],
+textarea {
+	display: block;
+	margin: 10px auto;
+	width: 80%;
+	pointer-events: all;
+	font-weight: 200;
+	text-align: center;
+	border-radius: 10px;
+	height: 40px;
+	font-size: 1.5em;
+	background-color: $main-background;
+	color: $off-white;
+	border: 2px solid $dropdown;
+}
+
+#contact-input[type='email'],
+textarea {
+	display: block;
+	margin: 10px auto;
+	width: 80%;
+	pointer-events: all;
+	font-weight: 200;
+	text-align: center;
+	border-radius: 10px;
+	height: 40px;
+	font-size: 1.5em;
+	background-color: $main-background;
+	color: $off-white;
+	border: 2px solid $dropdown;
+}
+
+#contact-input[type='submit'] {
+	pointer-events: all;
+	user-select: all;
+	display: block;
+	margin: 10px auto;
+	width: 80%;
+	font-weight: 200;
+	text-align: center;
+	border-radius: 10px;
+	height: 35px;
+	font-size: 1.5em;
+	background-color: $main-background;
+	color: $off-white;
+	border: 2px solid $dropdown;
+}

@@ -25,7 +25,7 @@ helpers do
     media = []
     Dir.foreach("public/projects/#{folder}") do |file|
       next if file == '.' or file == '..'
-      description = YAML::load_file "public/projects/#{folder}/description.yml"
+      # description = YAML::load_file "public/projects/#{folder}/description.yml"
       case File.extname(file)
       when '.jpg', '.JPG', '.jpeg', '.png', '.gif', '.bmp', '.tiff'
         media.push(img(folder, file))
@@ -53,6 +53,7 @@ helpers do
     Dir.foreach("public/projects/#{folder}") do |project|
       next if project == '.' or project == '..'
       Dir.foreach("public/projects/#{folder}/#{project}") do |file|
+
         next if file == '.' or file == '..'
         description = YAML::load_file "public/projects/#{folder}/#{project}/description.yml"
         case File.extname(file)
