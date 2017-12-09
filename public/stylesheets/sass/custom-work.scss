@@ -40,10 +40,6 @@ textarea:focus {
 	outline: 0;
 }
 
-// input#contact-input[type='submit']:hover {
-// 	border: 2px solid $dropdown;
-// }
-
 input#contact-input[type='submit']:hover {
 	background-color: lighten($cta-background, 5%);
 }

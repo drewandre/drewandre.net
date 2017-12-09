@@ -81,7 +81,7 @@ reset = function() {
 	period = 1 / 500;
 	noise.seed(Math.random());
 	particles = [];
-	for (_i = 1; _i <= 200; _i++) {
+	for (_i = 1; _i <= 1000; _i++) {
 		p1 = {
 			x: w * 0.25 + Math.random() * w * 0.5,
 			y: h * 0.3 + Math.random() * h * 0.4,
