@@ -2,11 +2,16 @@
 <div class='centered'>
   <h2 id='work'>Custom Work Form</h2>
   <hr id='work-example'/>
-  <div class='contact-form'>
-    <input type='text' id='contact-input' placeholder='name' autoComplete='off' required />
+  <% flash.each do |type, message| %>
+    <div class="flash flash-<%= type %>">
+      <%= message %>
+    </div>
+  <% end %>
+  <form class='contact-form' action='/custom-installs' method='post'>
+    <input type='text' name='name' id='contact-input' placeholder='name' autoComplete='off' required />
     <input type='text' id='contact-input' placeholder='city' autoComplete='off' required />
-    <input type='email' id='contact-input' placeholder='email' autoComplete='off' required />
-    <textarea name='textarea' id='contact-input' placeholder='comments' autoComplete='off' required rows="50" cols="50"></textarea>
-    <input type='submit' id='contact-input' />
-  </div>
+    <input type='email' name='from_email' id='contact-input' placeholder='email' autoComplete='off' required />
+    <textarea name='comments' id='contact-input' placeholder='comments' autoComplete='off' required ></textarea>
+    <input type='submit' id='contact-input' role='button' />
+  </form>
 </div>

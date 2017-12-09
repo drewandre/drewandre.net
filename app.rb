@@ -3,6 +3,7 @@ require 'sinatra/activerecord'
 require 'sinatra/reloader'
 require 'sinatra/flash'
 require 'sass/plugin/rack'
+require 'action_mailer'
 require_relative 'app/helpers/helpers.rb'
 
 enable :sessions
@@ -15,6 +16,20 @@ end
 
 configure do
   ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
+
+  ActionMailer::Base.raise_delivery_errors = true
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+     :address        => "smtp.gmail.com",
+     :port           => 587,
+     :domain         => "example.com",
+     :authentication => :plain,
+     :user_name      => "drewjamesandre@gmail.com",
+     :password       => "Hobbes1990",
+     :enable_starttls_auto => true
+    }
+  ActionMailer::Base.view_paths = File.expand_path('../app/views/', __FILE__)
+
   Sass::Plugin.options[:style] = :compressed
   use Sass::Plugin::Rack
   set :views, 'app/views'
@@ -43,6 +58,16 @@ end
 
 get '/custom-installs' do
   erb :custom_installs
+end
+
+post '/custom-installs' do
+  @from_email = params[:from_email];
+  @comments = params[:comments];
+  @name = params[:name];
+  email = Mailer.notification(@from_email, @comments, @name)
+  email.deliver
+  flash[:success] = "Thanks for the email! Give me 48 hours and I'll get back to you."
+  erb :index
 end
 
 get '/work/web' do

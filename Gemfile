@@ -1,11 +1,16 @@
 source "https://rubygems.org"
 
-gem "activerecord", "~> 4.1"
+ruby '2.4.2'
+
+gem 'activerecord'
+gem 'actionmailer'
+gem 'activesupport'
+gem 'font-awesome-rails', '~> 4.5'
 gem "pg"
 gem "rake"
 gem "sass"
-gem "sinatra", "~> 1.4"
-gem "sinatra-activerecord", "~> 2.0"
+gem "sinatra"
+gem "sinatra-activerecord"
 gem "sinatra-contrib"
 gem "sinatra-flash"
 

@@ -81,7 +81,7 @@ reset = function() {
 	period = 1 / 500;
 	noise.seed(Math.random());
 	particles = [];
-	for (_i = 1; _i <= 1000; _i++) {
+	for (_i = 1; _i <= 200; _i++) {
 		p1 = {
 			x: w * 0.25 + Math.random() * w * 0.5,
 			y: h * 0.3 + Math.random() * h * 0.4,
@@ -117,21 +117,15 @@ window.addEventListener('resize', function(e) {
 
 menu.addEventListener('mouseenter', function(e) {
 	return pauseAnimation(true);
-	// return pauseAnimation(!pausePerlin);
 });
 
 menu.addEventListener('mouseleave', function(e) {
 	return pauseAnimation(false);
-	// return pauseAnimation(!pausePerlin);
 });
 
 main.addEventListener('click', function() {
 	return pauseAnimation(false);
 });
-
-// menu_icon.addEventListener("click", function () {
-//   return pauseAnimation(false);
-// });
 
 f = function() {
 	raf(f);

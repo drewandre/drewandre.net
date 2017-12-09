@@ -10,6 +10,12 @@
   <% if @description['github-link'] %>
     <a class='work-info' target="_blank" href=<%= @description['github-link']%>><strong>GitHub</strong></a>
   <% end %>
+  <% if @description['codeship'] %>
+    <img class='work-info' target="_blank" src=<%= @description['codeship']%> alt="Codeship Status"></img>
+  <% end %>
+  <% if @description['coveralls'] %>
+    <img class='work-info' target="_blank" src=<%= @description['coveralls']%> alt="Coverage Status"></img>
+  <% end %>
   <div class='work-wrapper'>
     <% @photos.each do |photo| %>
       <%= photo %>

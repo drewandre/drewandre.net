@@ -32,6 +32,7 @@
 
 .work-wrapper {
 	@include no-user-select();
+	margin: 30px auto;
 	z-index: 20;
 	overflow: scroll;
 }
@@ -55,7 +56,6 @@
 	width: 95%;
 	max-width: 800px;
 	max-height: 400px;
-	// overflow: hidden;
 }
 
 .work-text {
@@ -76,7 +76,7 @@
 p.description {
 	width: 95%;
 	max-width: 800px;
-	margin: 20px auto;
+	margin: 40px auto;
 	font-size: 1.5em;
 	color: $off-white;
 }
@@ -92,12 +92,18 @@ p.work-info {
 
 a.work-info {
 	pointer-events: all;
-	display: block;
+	display: inline;
 	width: 95%;
 	max-width: 800px;
 	margin: 20px auto;
 	font-size: 1em;
 	color: $off-white;
+}
+
+img.work-info {
+	pointer-events: all;
+	width: 100px;
+	margin: -2px 10px;
 }
 
 .image-darken {

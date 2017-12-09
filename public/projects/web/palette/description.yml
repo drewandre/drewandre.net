@@ -4,3 +4,5 @@ full-description: "Palette allows users to have control over one, or many smart 
 tools: "Ruby on Rails, React.js, PostgreSQL"
 libraries: "Vibrant.js, Huey"
 github-link: "https://github.com/drewandre/palette"
+codeship: "https://app.codeship.com/projects/3a1278a0-94b9-0135-3636-26f9e1beef69/status?branch=master"
+coveralls: "https://coveralls.io/repos/github/drewandre/palette-dashboard/badge.svg?branch=master"

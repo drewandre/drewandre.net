@@ -3,7 +3,7 @@
 
 .contact-form {
 	margin: 50px auto;
-	width: 50%;
+	width: 85%;
 	max-width: 500px;
 	display: inline-block;
 }
@@ -29,6 +29,10 @@ textarea {
 	display: block;
 	margin: 10px auto;
 	width: 80%;
+	max-width: 80%;
+	min-width: 80%;
+	min-height: 40px;
+	max-height: 80%;
 	pointer-events: all;
 	font-weight: 200;
 	text-align: center;
@@ -45,13 +49,17 @@ textarea {
 	user-select: all;
 	display: block;
 	margin: 10px auto;
-	width: 80%;
-	font-weight: 200;
+	width: 82%;
 	text-align: center;
 	border-radius: 10px;
 	height: 35px;
 	font-size: 1.5em;
-	background-color: $main-background;
-	color: $off-white;
+	font-weight: 300;
+	background-color: $cta-background;
+	color: $main-background;
 	border: 2px solid $dropdown;
+}
+
+#contact-input:focus {
+	outline: none;
 }
