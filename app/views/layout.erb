@@ -14,6 +14,14 @@
         <%= message %>
       </div>
     <% end %> -->
+
+    <% flash.keys.each do |type| %>
+      <div class="flash">
+        <%= flash[type] %>
+        FLASH ALERT!
+      </div>
+    <% end %>
+
     <nav id='main-nav'>
       <div id='menu'>
         <i class="fa fa-bars fa-2x" id='menu-icon' aria-hidden="true"></i>
