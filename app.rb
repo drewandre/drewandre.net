@@ -44,6 +44,10 @@ get '/' do
   erb :index
 end
 
+get '/thank-you' do
+  erb :thank_you
+end
+
 get '/about' do
   erb :about
 end
@@ -66,8 +70,8 @@ post '/custom-installs' do
   @name = params[:name];
   email = Mailer.notification(@from_email, @comments, @name)
   email.deliver
-  flash[:success] = "Thanks for the email! Give me 48 hours and I'll get back to you."
-  erb :index
+  flash[:success] = "Thanks for the email #{@name.split.first}! Give me 48 hours and I'll get back to you!"
+  redirect '/'
 end
 
 get '/work/web' do

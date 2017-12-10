@@ -5,7 +5,6 @@ ruby '2.4.2'
 gem 'activerecord'
 gem 'actionmailer'
 gem 'activesupport'
-gem 'font-awesome-rails'
 gem "pg"
 gem "rake"
 gem "sass"

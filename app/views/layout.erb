@@ -10,18 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   </head>
   <body>
-    <!-- <% flash.each do |type, message| %>
-      <div class="flash flash-<%= type %>">
-        <%= message %>
-      </div>
-    <% end %> -->
 
-    <% flash.keys.each do |type| %>
-      <div class="flash">
-        <%= flash[type] %>
-        FLASH ALERT!
-      </div>
-    <% end %>
 
     <nav id='main-nav'>
       <div id='menu'>
@@ -56,6 +45,11 @@
       </ul>
     </nav>
     <div class='main'>
+      <% flash.each do |type, message| %>
+        <div class="home-centered flash flash-<%= type %>">
+          <%= message %>
+        </div>
+      <% end %>
       <%= yield %>
       <footer>
         <a href='https://www.linkedin.com/in/drewandre' target="_blank"><i class="fa fa-linkedin-square fa-3x" id='social-media-icon' aria-hidden="true"></i></a>
