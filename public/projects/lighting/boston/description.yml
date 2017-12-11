@@ -3,7 +3,7 @@ short-description: "Audio reactive drum LED system"
 full-description: "Designed for band Boston's 2017 HyperSpace Tour, this system triggers LEDS on every drum hit. The system is low-profile, waterproof, and extensively stress-tested for any conditions on the road. An on-board, high-contrast OLED screen allows settings to be customized on the fly, and noise thresholds adjusted and saved for any number of drummers."
 tools: null
 libraries: "FastLED"
-hardware: "Teensy 3.2, WS2812B LED strips (144/m), custom 5-pin cable, 5W 60AMP power supply, OLED screen"
+hardware: "Teensy 3.2, WS2812B LEDS, OLED screen, custom 5-pin cable, 5W 60AMP power supply"
 external-url: null
 github-link: "https://github.com/drewandre/hyperspace"
 codeship: null

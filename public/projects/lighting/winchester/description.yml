@@ -3,7 +3,7 @@ short-description: "Home recessed lighting system with audio reactive effects"
 full-description: "This system is a custom installation in New London, Connecticut. Client can choose between several audio reactive effects (full stereo), as well as dynamic mood lighting effects with over two dozen color palettes."
 tools: null
 libraries: "FastLED"
-hardware: "Arduino MEGA, MSGEQ7 analyzer, WS2812B LED strips, 5W 60AMP power supply"
+hardware: "Arduino MEGA, MSGEQ7, WS2812B LEDS, 5W 60AMP power supply"
 external-url: null
 github-link: "https://github.com/drewandre/winchester"
 codeship: null
