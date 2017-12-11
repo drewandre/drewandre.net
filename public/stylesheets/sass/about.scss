@@ -2,58 +2,60 @@
 @import 'mixins';
 
 .title {
-	pointer-events: none;
-	@include no-user-select();
-	z-index: 10;
-	position: relative;
-	color: $off-white;
-	font-size: 2em;
-	font-weight: 400;
-	width: 100%;
-	height: fit-content;
-	margin-top: -13px;
-	text-align: center;
+  pointer-events: none;
+  @include no-user-select();
+  z-index: 10;
+  position: relative;
+  color: $off-white;
+  font-size: 2em;
+  font-weight: 400;
+  width: 100%;
+  height: fit-content;
+  margin-top: -13px;
+  text-align: center;
 }
 
 .about {
-	pointer-events: all;
-	@include no-user-select();
-	margin: 10px auto;
-	width: 90%;
-	z-index: 10;
-	position: relative;
-	color: $off-white;
-	font-size: 1.5em;
-	font-weight: 300;
-	height: fit-content;
-	text-align: center;
-	line-height: 2em;
+  pointer-events: none;
+  @include no-user-select();
+  margin: auto;
+  width: 75%;
+  z-index: 10;
+  position: relative;
+  color: $off-white;
+  font-size: 1.5em;
+  font-weight: 300;
+  height: fit-content;
+  margin-top: -13px;
+  text-align: center;
 }
 
 #headshot {
-	pointer-events: none;
-	margin: 5% auto 5% auto;
-	width: 200px;
-	height: 200px;
-	border: 1px solid black;
-	border-radius: 100%;
-	overflow: hidden;
+  pointer-events: none;
+  margin: 5% auto 5% auto;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 100%;
+  overflow: hidden;
+  filter: grayscale(80%);
 }
 
 .centered {
-	@include no-user-select();
-	pointer-events: none;
-	z-index: 1;
-	top: 49%;
-	width: 100%;
-	text-align: center;
-	padding-top: 150px;
+  @include no-user-select();
+  pointer-events: none;
+  position: absolute;
+  top: 125px;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
 .about a {
-	color: $off-white;
+  color: $off-white;
 }
 
 .about a:hover {
-	color: lighten($off-white, 15%);
+  color: darken($off-white, 10%);
 }

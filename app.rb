@@ -85,6 +85,20 @@ get '/work/lighting' do
   erb :"work/index"
 end
 
+get '/work/web' do
+    @title = 'WORK';
+    @subtitle = '(WEB)';
+    @photos = gather_top_images_from('web')
+  erb :"work/index"
+end
+
+get '/work/lighting' do
+  @title = 'WORK';
+  @subtitle = '(LIGHTING)';
+  @photos = gather_top_images_from('lighting')
+  erb :"work/index"
+end
+
 get '/work/web/palette' do
   @title = 'Palette';
   @subtitle = 'Smart LED controller';
