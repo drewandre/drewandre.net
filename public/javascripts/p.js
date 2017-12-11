@@ -31,7 +31,7 @@ randomWithRange = function(min, max) {
 	return Math.random() * range + min;
 };
 
-period = 1 / randomWithRange(150, 650);
+period = 1 / randomWithRange(280, 650);
 
 noise.seed(Math.random());
 
@@ -124,6 +124,18 @@ menu.addEventListener('mouseleave', function(e) {
 });
 
 main.addEventListener('click', function() {
+	return pauseAnimation(false);
+});
+
+menu.addEventListener('mouseenter', function(e) {
+	return pauseAnimation(true);
+});
+
+menu.addEventListener('mouseleave', function(e) {
+	return pauseAnimation(false);
+});
+
+below_nav.addEventListener('click', function() {
 	return pauseAnimation(false);
 });
 

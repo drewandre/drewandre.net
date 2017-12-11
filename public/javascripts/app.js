@@ -78,3 +78,7 @@ $(function() {
 	// to allow :active styles to work on Mobile Safari
 	document.addEventListener('touchstart', function() {}, true);
 });
+
+// to allow :active styles to work in your CSS on a page in Mobile Safari
+document.addEventListener('touchstart', function() {}, true);
+// $('html, body').scrollTop(1);
