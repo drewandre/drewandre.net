@@ -139,6 +139,10 @@ main.addEventListener('click', function() {
 	return pauseAnimation(false);
 });
 
+// menu_icon.addEventListener("click", function () {
+//   return pauseAnimation(false);
+// });
+
 f = function() {
 	raf(f);
 	// pauseAnimation(true);

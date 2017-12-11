@@ -121,6 +121,7 @@ helpers do
     Dir.foreach("public/projects/#{folder}") do |project|
       next if project == '.' or project == '..'
       Dir.foreach("public/projects/#{folder}/#{project}") do |file|
+
         next if file == '.' or file == '..'
         description = YAML::load_file "public/projects/#{folder}/#{project}/description.yml"
         case File.extname(file)
@@ -133,5 +134,4 @@ helpers do
     end
     return images
   end
-
 end
