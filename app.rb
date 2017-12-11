@@ -24,8 +24,8 @@ configure do
      :port           => 587,
      :domain         => "example.com",
      :authentication => :plain,
-     :user_name      => "drewjamesandre@gmail.com",
-     :password       => "Hobbes1990",
+     :user_name      => ENV['email'],
+     :password       => ENV['password'],
      :enable_starttls_auto => true
     }
   ActionMailer::Base.view_paths = File.expand_path('../app/views/', __FILE__)
