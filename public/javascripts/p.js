@@ -135,7 +135,7 @@ menu.addEventListener('mouseleave', function(e) {
 	return pauseAnimation(false);
 });
 
-below_nav.addEventListener('click', function() {
+main.addEventListener('click', function() {
 	return pauseAnimation(false);
 });
 
