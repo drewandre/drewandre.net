@@ -6,6 +6,13 @@ require 'sass/plugin/rack'
 require 'action_mailer'
 require_relative 'app/helpers/helpers.rb'
 
+begin
+  require './env' if File.exists?('env.rb')
+  puts "Found env file"
+rescue LoadError
+  puts "Couldn't find env file"
+end
+
 enable :sessions
 
 set :bind, '0.0.0.0' # bind to all interfaces
@@ -16,7 +23,6 @@ end
 
 configure do
   ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
-
   ActionMailer::Base.raise_delivery_errors = true
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
@@ -24,8 +30,8 @@ configure do
      :port           => 587,
      :domain         => "example.com",
      :authentication => :plain,
-     :user_name      => ENV['email'],
-     :password       => ENV['password'],
+     :user_name      => ENV["GMAIL_USERNAME"],
+     :password       => ENV["GMAIL_PASSWORD"],
      :enable_starttls_auto => true
     }
   ActionMailer::Base.view_paths = File.expand_path('../app/views/', __FILE__)
@@ -44,10 +50,6 @@ get '/' do
   erb :index
 end
 
-get '/thank-you' do
-  erb :thank_you
-end
-
 get '/about' do
   erb :about
 end
@@ -56,22 +58,18 @@ get '/contact' do
   erb :contact
 end
 
-get '/store' do
-  erb :store
-end
-
-get '/custom-installs' do
-  erb :custom_installs
-end
-
-post '/custom-installs' do
-  @from_email = params[:from_email];
-  @comments = params[:comments];
-  @name = params[:name];
-  email = Mailer.notification(@from_email, @comments, @name)
-  email.deliver
-  flash[:success] = "Thanks for the email #{@name.split.first}! Give me 48 hours and I'll get back to you!"
-  redirect '/'
+post '/contact' do
+  @from_email = params[:from_email]
+  @location = params[:location]
+  @comments = params[:comments]
+  @name = params[:name]
+  @me = "drewjamesandre@gmail.com"
+  auto_reply = Mailer.auto_reply(@from_email, @name)
+  email_to_me = Mailer.email_to_me(@from_email, @comments, @name, @location)
+  auto_reply.deliver
+  email_to_me.deliver
+  flash[:success] = "Thanks for the email #{@name.split.first}! Give me 48 hours and I'll get back to you."
+  redirect '/contact'
 end
 
 get '/work/web' do
@@ -93,6 +91,9 @@ get '/work/web/palette' do
   @subtitle = 'Smart LED controller';
   @description = YAML::load_file "public/projects/web/palette/description.yml"
   @tools = create_tools_icons(@description, "show")
+  if @description['vimeo_urls']
+    @vimeo_videos = create_vimeo_iframes(@description)
+  end
   @photos = gather_all_media_from('web/palette')
   erb :"work/show"
 end
@@ -102,6 +103,9 @@ get '/work/web/reporev' do
   @subtitle = 'GitHub Repo Search';
   @description = YAML::load_file "public/projects/web/reporev/description.yml"
   @tools = create_tools_icons(@description, "show")
+  if @description['vimeo_urls']
+    @vimeo_videos = create_vimeo_iframes(@description)
+  end
   @photos = gather_all_media_from('web/reporev')
   erb :"work/show"
 end
@@ -111,6 +115,9 @@ get '/work/web/portfolio' do
   @subtitle = 'Portfolio';
   @description = YAML::load_file "public/projects/web/portfolio/description.yml"
   @tools = create_tools_icons(@description, "show")
+  if @description['vimeo_urls']
+    @vimeo_videos = create_vimeo_iframes(@description)
+  end
   @photos = gather_all_media_from('web/portfolio')
   erb :"work/show"
 end
@@ -120,6 +127,9 @@ get '/work/lighting/aura' do
   @subtitle = 'Smart LED controller';
   @description = YAML::load_file "public/projects/lighting/aura/description.yml"
   @tools = create_tools_icons(@description, "show")
+  if @description['vimeo_urls']
+    @vimeo_videos = create_vimeo_iframes(@description)
+  end
   @photos = gather_all_media_from('lighting/aura')
   erb :"work/show"
 end
@@ -129,6 +139,9 @@ get '/work/lighting/boston' do
   @subtitle = 'LED Drum Kit';
   @description = YAML::load_file "public/projects/lighting/boston/description.yml"
   @tools = create_tools_icons(@description, "show")
+  if @description['vimeo_urls']
+    @vimeo_videos = create_vimeo_iframes(@description)
+  end
   @photos = gather_all_media_from('lighting/boston')
   erb :"work/show"
 end
@@ -138,6 +151,9 @@ get '/work/lighting/tremont' do
   @subtitle = 'Reactive apartment lighting';
   @description = YAML::load_file "public/projects/lighting/tremont/description.yml"
   @tools = create_tools_icons(@description, "show")
+  if @description['vimeo_urls']
+    @vimeo_videos = create_vimeo_iframes(@description)
+  end
   @photos = gather_all_media_from('lighting/tremont')
   erb :"work/show"
 end
@@ -147,6 +163,9 @@ get '/work/lighting/winchester' do
   @subtitle = 'Reactive dorm lighting';
   @description = YAML::load_file "public/projects/lighting/winchester/description.yml"
   @tools = create_tools_icons(@description, "show")
+  if @description['vimeo_urls']
+    @vimeo_videos = create_vimeo_iframes(@description)
+  end
   @photos = gather_all_media_from('lighting/winchester')
   erb :"work/show"
 end

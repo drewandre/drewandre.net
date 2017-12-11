@@ -1,6 +1,6 @@
 title: "Aura"
 short-description: "Reactive LED bar"
-full-description: "Aura is an LED bar capable of live music visualizations and dynamic mood lighting. By housing a high-density LED strip inside a diffused aluminum channel, users cannot distinguish between each LED. Audio reactive effects are achieved using the FastLED library in combination with the Teensy Audio Library, and the effects (running at 182 fps) are incredibly synesthetic."
+full-description: "Aura is an LED bar capable of live music visualizations and dynamic mood lighting. By housing a high-density LED strip inside a diffused aluminum channel, users cannot distinguish between each LED. Audio reactive effects are achieved using the FastLED library in combination with the Teensy Audio Library, and the effects (running at 182 fps) are very synesthetic."
 tools: null
 libraries: "FastLED, Teensy Audio"
 hardware: "Teensy 3.2, Teensy Audio Shield, 74HCT245 buffer, WS2812B LEDS, 1m Aluminum Channel"
@@ -8,3 +8,4 @@ external-url: null
 github-link: null
 codeship: null
 coveralls: null
+vimeo_urls: "246737182, 246737064, 246737636"

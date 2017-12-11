@@ -46,6 +46,29 @@ helpers do
     end
   end
 
+  def create_vimeo_iframes(description)
+    videos = []
+    description['vimeo_urls'].split(', ').each do |url|
+      videos.push(vimeo_iframe(url))
+    end
+    return videos
+  end
+
+  def vimeo_iframe(url)
+    return (
+      "<div class='work-static'>
+        <div class='vimeo-container'>
+          <iframe class='vimeo-iframe' src='https://player.vimeo.com/video/#{url}'
+            frameborder='0'
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>"
+    )
+  end
+
   def img(folder, file)
     title = File.basename(file,File.extname(file)).gsub(/[_-]/, ' ').split.map(&:capitalize).join(' ')
     return (
@@ -72,9 +95,11 @@ helpers do
       next if file == '.' or file == '..'
       case File.extname(file)
       when '.jpg', '.JPG', '.jpeg', '.png', '.gif', '.bmp', '.tiff'
-        media.push(img(folder, file))
-      when '.mp4'
-        media.push(vid(folder, file))
+        if File.basename(file, File.extname(file)).start_with?('top')
+          media.unshift(img(folder, file))
+        else
+          media.push(img(folder, file))
+        end
       end
     end
     return media

@@ -1,12 +1,30 @@
 @import 'colors';
 @import 'mixins';
 
+.contact-description {
+	user-select: all;
+	letter-spacing: 2px;
+	margin: 0 30px;
+	display: inline-table;
+	max-width: 400px;
+	font-size: 1.1em;
+	font-weight: 100;
+	line-height: 1.8em;
+	color: $off-white;
+}
+
+#contact-info {
+	user-select: all;
+	pointer-events: all;
+	font-weight: 400;
+}
+
 .contact-form {
-	margin: 50px auto;
+	margin: 10px auto;
 	text-align: center;
 	width: 85%;
 	max-width: 500px;
-	display: inline-block;
+	display: inline-table;
 	padding: 10px;
 }
 
@@ -29,7 +47,7 @@ input#contact-input {
 }
 
 input#contact-input[type='submit'] {
-	font-weight: 300;
+	font-weight: 600;
 	background-color: $cta-background;
 	color: $main-background;
 }

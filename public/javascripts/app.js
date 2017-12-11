@@ -75,18 +75,6 @@ $(function() {
 		});
 	});
 
-	// $('video')
-	// 	.off('play')
-	// 	.on('play', function() {
-	// 		var dd = this.id;
-	// 		$('video').each(function(index) {
-	// 			if (dd != this.id) {
-	// 				this.pause();
-	// 				this.currentTime = 0;
-	// 			}
-	// 		});
-	// 	});
-
 	// to allow :active styles to work on Mobile Safari
 	document.addEventListener('touchstart', function() {}, true);
 });

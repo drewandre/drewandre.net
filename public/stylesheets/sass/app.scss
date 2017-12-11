@@ -80,6 +80,8 @@ canvas {
 
 a {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	color: $off-white;
+	pointer-events: all;
 	text-decoration: none;
 }
 

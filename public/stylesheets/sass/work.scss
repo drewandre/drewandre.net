@@ -1,6 +1,21 @@
 @import 'mixins';
 @import 'colors';
 
+.vimeo-iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.vimeo-container {
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-bottom: 56.25%;
+}
+
 #work {
 	pointer-events: none;
 	@include no-user-select();
@@ -56,7 +71,6 @@
 	position: relative;
 	width: 95%;
 	max-width: 800px;
-	max-height: 400px;
 }
 
 .work-text {
@@ -100,7 +114,7 @@
 }
 
 #tool {
-	font-weight: 500;
+	font-weight: 600;
 	display: inline-block;
 	color: $main-background;
 	background: $tool-background;
@@ -111,13 +125,11 @@
 
 #library {
 	@extend #tool;
-	color: $main-background;
 	background: $library-background;
 }
 
 #hardware {
 	@extend #tool;
-	color: $main-background;
 	background: $hardware-background;
 }
 
@@ -130,6 +142,7 @@ p.description {
 }
 
 a.description {
+	font-weight: 600;
 	margin: 20px auto;
 	text-align: center;
 	width: fit-content;
@@ -149,7 +162,7 @@ a.description:hover {
 
 .work-info {
 	display: inline-block;
-	width: 80px;
+	width: 110px;
 	margin: 0 10px;
 	max-width: 800px;
 	font-size: 1.2em;
@@ -158,16 +171,16 @@ a.description:hover {
 }
 
 .tools-icons {
-	margin: 0 35px;
+	margin: 0 16px;
 	display: inline-table;
-	width: calc(100% - 180px);
+	width: calc(100% - 210px);
 }
 
 .work-description {
 	letter-spacing: 2px;
 	display: inline-table;
-	max-width: 615px;
-	margin: 13px 40px 0 40px;
+	max-width: 625px;
+	margin: 13px 20px 0 20px;
 	font-size: 1.1em;
 	font-weight: 300;
 	line-height: 1.8em;
@@ -177,7 +190,7 @@ a.description:hover {
 a.work-info {
 	pointer-events: all;
 	display: inline-block;
-	width: 80px;
+	width: 110px;
 	margin: 0 10px;
 	max-width: 800px;
 	font-size: 1.2em;

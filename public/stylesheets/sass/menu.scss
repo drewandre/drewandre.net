@@ -21,12 +21,16 @@
 	cursor: pointer;
 }
 
+.custom-work > a {
+	background-color: none;
+}
+
 .custom-work:hover {
 	background-color: lighten($cta-background, 5%);
 }
 
 a p {
-	color: #343434;
+	color: $dropdown;
 }
 
 #signature {
@@ -93,7 +97,7 @@ a p {
 			text-decoration: none;
 			font-weight: 700;
 			font-size: 15px;
-			line-height: 40px;
+			line-height: 32px;
 			padding: 0 15px;
 			margin: 0;
 		}

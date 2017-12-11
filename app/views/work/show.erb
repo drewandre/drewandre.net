@@ -7,7 +7,9 @@
   <div class='show-page-tool-list'>
     <div class='work-tools-show-page'>
       <% if @description['external-url'] %>
-        <a class='description' target="_blank" href=<%= @description['external-url'] %>>Visit <%= @title %></a>
+        <a class='description' target="_blank" href=<%= @description['external-url'] %>>Visit <%= @title %>
+          <i class="fa fa-external-link" id="open-link-icon" aria-hidden="true"></i>
+        </a>
       <% end %>
       <p class='work-info'>Description</p>
       <p class='work-description'>
@@ -24,7 +26,9 @@
     <% end %>
     <div class='work-tools-show-page'>
       <% if @description['github-link'] %>
-        <a class='work-info' target="_blank" href=<%= @description['github-link']%>>GitHub</a>
+        <a class='work-info' target="_blank" href=<%= @description['github-link']%>>GitHub
+          <i class="fa fa-external-link" id="open-link-icon" aria-hidden="true"></i>
+        </a>
       <% end %>
       <div class='tools-icons'>
         <% if @description['codeship'] %>
@@ -37,6 +41,11 @@
     </div>
   </div>
   <div class='work-wrapper'>
+    <% if @description['vimeo_urls'] %>
+      <% @vimeo_videos.each do |video| %>
+        <%= video %>
+      <% end %>
+    <% end %>
     <% @photos.each do |photo| %>
       <%= photo %>
     <% end %>
