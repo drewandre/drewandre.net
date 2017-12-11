@@ -37,10 +37,10 @@
 
 @mixin start_icon_transition() {
 	color: $off-white;
-	-webkit-transition: background-color 400ms ease-out 0s;
-	-moz-transition: background-color 400ms ease-out 0s;
-	-o-transition: background-color 400ms ease-out 0s;
-	transition: background-color 400ms ease-out 0s;
+	-webkit-transition: background-color 300ms ease-out 0s;
+	-moz-transition: background-color 300ms ease-out 0s;
+	-o-transition: background-color 300ms ease-out 0s;
+	transition: background-color 300ms ease-out 0s;
 }
 
 @mixin end_icon_transition() {

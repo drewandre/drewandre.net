@@ -92,6 +92,7 @@ get '/work/web/palette' do
   @title = 'Palette';
   @subtitle = 'Smart LED controller';
   @description = YAML::load_file "public/projects/web/palette/description.yml"
+  @tools = create_tools_icons(@description, "show")
   @photos = gather_all_media_from('web/palette')
   erb :"work/show"
 end
@@ -100,6 +101,7 @@ get '/work/web/reporev' do
   @title = 'RepoRev';
   @subtitle = 'GitHub Repo Search';
   @description = YAML::load_file "public/projects/web/reporev/description.yml"
+  @tools = create_tools_icons(@description, "show")
   @photos = gather_all_media_from('web/reporev')
   erb :"work/show"
 end
@@ -108,6 +110,7 @@ get '/work/web/portfolio' do
   @title = 'drew-andre.com';
   @subtitle = 'Portfolio';
   @description = YAML::load_file "public/projects/web/portfolio/description.yml"
+  @tools = create_tools_icons(@description, "show")
   @photos = gather_all_media_from('web/portfolio')
   erb :"work/show"
 end
@@ -116,6 +119,7 @@ get '/work/lighting/aura' do
   @title = 'Aura';
   @subtitle = 'Smart LED controller';
   @description = YAML::load_file "public/projects/lighting/aura/description.yml"
+  @tools = create_tools_icons(@description, "show")
   @photos = gather_all_media_from('lighting/aura')
   erb :"work/show"
 end
@@ -124,6 +128,7 @@ get '/work/lighting/boston' do
   @title = 'Boston';
   @subtitle = 'LED Drum Kit';
   @description = YAML::load_file "public/projects/lighting/boston/description.yml"
+  @tools = create_tools_icons(@description, "show")
   @photos = gather_all_media_from('lighting/boston')
   erb :"work/show"
 end
@@ -132,6 +137,7 @@ get '/work/lighting/tremont' do
   @title = 'Tremont Street';
   @subtitle = 'Reactive apartment lighting';
   @description = YAML::load_file "public/projects/lighting/tremont/description.yml"
+  @tools = create_tools_icons(@description, "show")
   @photos = gather_all_media_from('lighting/tremont')
   erb :"work/show"
 end
@@ -140,6 +146,7 @@ get '/work/lighting/winchester' do
   @title = 'Winchester';
   @subtitle = 'Reactive dorm lighting';
   @description = YAML::load_file "public/projects/lighting/winchester/description.yml"
+  @tools = create_tools_icons(@description, "show")
   @photos = gather_all_media_from('lighting/winchester')
   erb :"work/show"
 end

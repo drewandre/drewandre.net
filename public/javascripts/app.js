@@ -1,6 +1,7 @@
 $(function() {
 	$('#main-nav > ul').hide();
 	$('.work-text').hide();
+	$('.work-tools').hide();
 
 	// TODO
 	// $(window).scroll(function(i) {

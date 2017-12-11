@@ -4,18 +4,38 @@
   <div id='category'><%= @subtitle %></div>
   <hr id='work-example'/>
   <p class='description'><%= @description['short-description'] %></p>
-  <p class='work-info'><strong>Description:</strong>&nbsp;&nbsp;<%= @description['full-description']%></p>
-  <p class='work-info'><strong>Tools:</strong>&nbsp;&nbsp;<%= @description['tools']%></p>
-  <p class='work-info'><strong>Libraries:</strong>&nbsp;&nbsp;<%= @description['libraries']%></p>
-  <% if @description['github-link'] %>
-    <a class='work-info' target="_blank" href=<%= @description['github-link']%>><strong>GitHub</strong></a>
-  <% end %>
-  <% if @description['codeship'] %>
-    <img class='work-info' target="_blank" src=<%= @description['codeship']%> alt="Codeship Status"></img>
-  <% end %>
-  <% if @description['coveralls'] %>
-    <img class='work-info' target="_blank" src=<%= @description['coveralls']%> alt="Coverage Status"></img>
-  <% end %>
+  <div class='show-page-tool-list'>
+    <div class='work-tools-show-page'>
+      <% if @description['external-url'] %>
+        <a class='description' target="_blank" href=<%= @description['external-url'] %>>Visit <%= @title %></a>
+      <% end %>
+      <p class='work-info'>Description</p>
+      <p class='work-description'>
+        <%= @description['full-description']%>
+      </p>
+    </div>
+    <% @tools.each do |tool| %>
+      <div class='work-tools-show-page'>
+        <p class='work-info'><%= tool.shift %></p>
+        <div class='tools-icons'>
+          <%= tool.first %>
+        </div>
+      </div>
+    <% end %>
+    <div class='work-tools-show-page'>
+      <% if @description['github-link'] %>
+        <a class='work-info' target="_blank" href=<%= @description['github-link']%>>GitHub</a>
+      <% end %>
+      <div class='tools-icons'>
+        <% if @description['codeship'] %>
+          <img class='work-info' target="_blank" src=<%= @description['codeship']%> alt="Codeship Status"></img>
+        <% end %>
+        <% if @description['coveralls'] %>
+          <img class='work-info' target="_blank" src=<%= @description['coveralls']%> alt="Coverage Status"></img>
+        <% end %>
+      </div>
+    </div>
+  </div>
   <div class='work-wrapper'>
     <% @photos.each do |photo| %>
       <%= photo %>
