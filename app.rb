@@ -8,7 +8,6 @@ require_relative 'app/helpers/helpers.rb'
 
 begin
   require './env' if File.exists?('env.rb')
-  puts "Found env file"
 rescue LoadError
   puts "Couldn't find env file"
 end
