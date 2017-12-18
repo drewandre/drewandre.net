@@ -1,3 +1,5 @@
+Chart.defaults.global.responsive = true;
+
 var query = `query User {
   user(login: "drewandre") {
     login
@@ -18,6 +20,8 @@ var query = `query User {
       }
     }
   }`;
+
+var GITHUB_OAUTH = document.currentScript.getAttribute("GITHUB_OAUTH");
 
 function updateLanguageSize(lang, languagesData) {
 	languagesData.find(item => {

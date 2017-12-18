@@ -1,5 +1,5 @@
-@import 'mixins';
-@import 'colors';
+@import "mixins";
+@import "colors";
 
 .vimeo-iframe {
 	position: absolute;
@@ -265,7 +265,7 @@ img.work-info {
 .chart-container {
 	display: inline-block;
 	position: relative;
-	margin: 0;
+	margin: auto;
 	height: 20vh;
 	width: 100vw;
 	max-width: 500px;
