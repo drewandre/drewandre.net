@@ -15,29 +15,54 @@
 	text-align: center;
 }
 
-.about {
+.about-me-container {
+	user-select: all;
+	margin: auto 30px;
+	display: inline-block;
+	width: 70%;
+	max-width: 700px;
+	font-size: 1.1em;
+	font-weight: 100;
+	line-height: 1.8em;
+	color: $off-white;
+	text-align: left;
+}
+
+.about-me-container h5 {
 	pointer-events: all;
 	@include no-user-select();
-	margin: 10px auto;
-	width: 90%;
-	z-index: 10;
-	position: relative;
+	padding: 40px 50px 0 0;
+	margin: 0;
+	width: fit-content;
+	display: inline-block;
+	// float: right;
 	color: $off-white;
 	font-size: 1.5em;
 	font-weight: 300;
-	height: fit-content;
-	text-align: center;
+	text-align: left;
 	line-height: 2em;
+	// background: blue;
+}
+
+.about-me-container p {
+	pointer-events: all;
+	@include no-user-select();
+	color: $off-white;
+	font-weight: 300;
+	line-height: 2em;
+	// background: red;
+}
+
+.about-me-container img {
+	float: left;
 }
 
 #headshot {
+	margin: 20px 30px 0 0;
 	pointer-events: none;
-	margin: 5% auto 5% auto;
 	width: 200px;
-	height: 200px;
 	border: 1px solid black;
 	border-radius: 100%;
-	overflow: hidden;
 }
 
 .centered {
@@ -56,4 +81,8 @@
 
 .about a:hover {
 	color: lighten($off-white, 15%);
+}
+
+#github-contribution-history {
+	border-radius: 10px;
 }

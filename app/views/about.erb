@@ -2,13 +2,39 @@
 <div class='centered'>
   <div id='work'>About Me</div>
   <hr id='work-example'/>
+<div class='about-me-container'>
   <img id='headshot' src='/images/headshot.jpg'></img>
-  <h5 class='about'>Hi, I'm Drew.</h5>
-  <div class='contact-description'>
-    <p>I'm a full stack web developer with interests in hardware and lighting.</p>
-    <p>
-      <a href='https://www.dropbox.com/s/8ibtx99bimpqw86/Drew_Andre_Resume.pdf?dl=0'>Here's my resume</a>
-      , and you can email me directly <a href="/contact">here.</a>
-    </p>
+  <h5>Hi, I'm Drew.</h5>
+  <div>
+    <h4>I'm a full stack web developer with interests in hardware and lighting.</h4>
   </div>
+  <p>
+    Over the past two years I've sang professionally, taught myself circuit design, designed a suite of audio reactive LED products, and studied at Launch Academy — a full stack web development bootcamp in downtown Boston. A personable, relaxed, and creative individual (an ENFP if you follow personality types), I've found that of all the experiences I've had, web development has been the most fulfilling and creative. Currently, I'm looking to join an engineering team in the Boston area as a full-stack developer and can be reached at <a href='/about'>drewjamesandre@gmail.com</a>.
+  </p>
 </div>
+<div class="chart-container">
+  <!-- <canvas id="github-contribution-history"></canvas> -->
+  <canvas id="language-data"></canvas>
+</div>
+<div class='skills-container'>
+  <h4>What I know</h4>
+  <% @skills_section.each do |section| %>
+    <% section.each do |skill| %>
+      <%= skill %>
+    <% end %>
+  <% end %>
+</div>
+
+<div class='skills-container'>
+  <h4>What I'm working on</h4>
+  <% @learning_section.each do |section| %>
+    <% section.each do |pending_skill| %>
+      <%= pending_skill %>
+    <% end %>
+  <% end %>
+</div>
+
+</div>
+<script src="/javascripts/Chart.bundle.min.js"></script>
+<!-- <script src="/javascripts/about_contributions.js"></script> -->
+<script src="/javascripts/about_languages.js"></script>

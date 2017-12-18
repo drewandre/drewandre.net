@@ -3,13 +3,16 @@ source "https://rubygems.org"
 gem 'activerecord'
 gem 'actionmailer'
 gem 'activesupport'
+gem 'json'
 gem "pg"
 gem "rake"
 gem "sass"
 gem "sinatra"
+gem 'httparty'
 gem "sinatra-activerecord"
 gem "sinatra-contrib"
 gem "sinatra-flash"
+gem 'webpacker'
 
 group :test, :development do
   gem "pry"

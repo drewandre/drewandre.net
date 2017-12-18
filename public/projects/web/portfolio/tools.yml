@@ -1,0 +1,3 @@
+frameworks: "Sinatra, SASS, PostgreSQL, Canvas, ActionMailer"
+libraries: "Custom JS Particle"
+hardware: null

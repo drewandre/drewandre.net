@@ -113,24 +113,76 @@
 	margin-bottom: 20px;
 }
 
-#tool {
+#frameworks {
 	font-weight: 600;
 	display: inline-block;
 	color: $main-background;
-	background: $tool-background;
+	background: $frameworks-background;
 	padding: 6px;
 	margin: 5px;
 	border-radius: 5px;
 }
 
-#library {
-	@extend #tool;
+#languages {
+	@extend #frameworks;
+	background: $languages-background;
+}
+
+#libraries {
+	@extend #frameworks;
 	background: $library-background;
 }
 
 #hardware {
-	@extend #tool;
+	@extend #frameworks;
 	background: $hardware-background;
+}
+
+#design {
+	@extend #frameworks;
+	background: $design-background;
+}
+
+#audio {
+	@extend #frameworks;
+	background: $design-background;
+}
+
+div.skills * {
+	@extend #frameworks;
+	background: $frameworks-background;
+}
+
+.skills-container h4 {
+	color: $off-white;
+	font-weight: 200;
+	font-size: 20px;
+}
+
+.skills-container {
+	display: inline-table;
+	width: 85%;
+	margin: 5vh auto;
+}
+
+.skills {
+	display: inline-table;
+	min-width: 240px;
+	padding: 10px;
+	border-radius: 10px;
+	margin: 0;
+	width: 20%;
+}
+
+h5.skills {
+	margin: 0;
+	padding: 0;
+	height: 30px;
+	display: block;
+	font-size: 1.4em;
+	color: $off-white;
+	width: 100%;
+	background: none;
 }
 
 p.description {
@@ -210,14 +262,11 @@ img.work-info {
 	filter: blur(10px) brightness(30%);
 }
 
-video::-internal-media-controls-download-button {
-	display: none;
-}
-
-video::-webkit-media-controls-enclosure {
-	overflow: hidden;
-}
-
-video::-webkit-media-controls-panel {
-	width: calc(100% + 30px);
+.chart-container {
+	display: inline-block;
+	position: relative;
+	margin: 0;
+	height: 20vh;
+	width: 100vw;
+	max-width: 500px;
 }

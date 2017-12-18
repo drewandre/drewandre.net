@@ -1,11 +1,8 @@
 title: "Tremont"
 short-description: "Home recessed lighting system with audio reactive effects"
 full-description: "This system is a custom installation in Back Bay, Boston. Client can choose between several audio reactive effects (full stereo), as well as dynamic mood lighting effects with over two dozen color palettes."
-tools: null
-libraries: "FastLED"
-hardware: "Arduino MEGA, MSGEQ7, WS2812B LEDS, 750W power supply"
 external-url: null
 github-link: "https://github.com/drewandre/winchester"
 codeship: null
 coveralls: null
-vimeo_urls: null
+vimeo_urls: "246867897, 246867115"

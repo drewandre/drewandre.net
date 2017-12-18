@@ -18,7 +18,7 @@
     </div>
     <% @tools.each do |tool| %>
       <div class='work-tools-show-page'>
-        <p class='work-info'><%= tool.shift %></p>
+        <p class='work-info'><%= tool.shift.capitalize %></p>
         <div class='tools-icons'>
           <%= tool.first %>
         </div>

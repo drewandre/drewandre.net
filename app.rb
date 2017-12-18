@@ -4,6 +4,8 @@ require 'sinatra/reloader'
 require 'sinatra/flash'
 require 'sass/plugin/rack'
 require 'action_mailer'
+require 'httparty'
+require 'json'
 require_relative 'app/helpers/helpers.rb'
 
 begin
@@ -50,6 +52,10 @@ get '/' do
 end
 
 get '/about' do
+  @skills_yml = YAML::load_file "public/about/skills.yml"
+  @learning_yml = YAML::load_file "public/about/learning.yml"
+  @skills_section = create_about_section(@skills_yml)
+  @learning_section = create_about_section(@learning_yml)
   erb :about
 end
 
@@ -62,7 +68,7 @@ post '/contact' do
   @location = params[:location]
   @comments = params[:comments]
   @name = params[:name]
-  @me = "drewjamesandre@gmail.com"
+  @me = ENV["GMAIL_USERNAME"]
   auto_reply = Mailer.auto_reply(@from_email, @name)
   email_to_me = Mailer.email_to_me(@from_email, @comments, @name, @location)
   auto_reply.deliver
@@ -103,7 +109,8 @@ get '/work/web/palette' do
   @title = 'Palette';
   @subtitle = 'Smart LED controller';
   @description = YAML::load_file "public/projects/web/palette/description.yml"
-  @tools = create_tools_icons(@description, "show")
+  @tools = YAML::load_file "public/projects/web/palette/tools.yml"
+  @tools = create_tools_icons(@tools, "show")
   if @description['vimeo_urls']
     @vimeo_videos = create_vimeo_iframes(@description)
   end
@@ -115,7 +122,8 @@ get '/work/web/reporev' do
   @title = 'RepoRev';
   @subtitle = 'GitHub Repo Search';
   @description = YAML::load_file "public/projects/web/reporev/description.yml"
-  @tools = create_tools_icons(@description, "show")
+  @tools = YAML::load_file "public/projects/web/reporev/tools.yml"
+  @tools = create_tools_icons(@tools, "show")
   if @description['vimeo_urls']
     @vimeo_videos = create_vimeo_iframes(@description)
   end
@@ -127,7 +135,8 @@ get '/work/web/portfolio' do
   @title = 'drew-andre.com';
   @subtitle = 'Portfolio';
   @description = YAML::load_file "public/projects/web/portfolio/description.yml"
-  @tools = create_tools_icons(@description, "show")
+  @tools = YAML::load_file "public/projects/web/portfolio/tools.yml"
+  @tools = create_tools_icons(@tools, "show")
   if @description['vimeo_urls']
     @vimeo_videos = create_vimeo_iframes(@description)
   end
@@ -139,7 +148,8 @@ get '/work/lighting/aura' do
   @title = 'Aura';
   @subtitle = 'Smart LED controller';
   @description = YAML::load_file "public/projects/lighting/aura/description.yml"
-  @tools = create_tools_icons(@description, "show")
+  @tools = YAML::load_file "public/projects/lighting/aura/tools.yml"
+  @tools = create_tools_icons(@tools, "show")
   if @description['vimeo_urls']
     @vimeo_videos = create_vimeo_iframes(@description)
   end
@@ -151,7 +161,8 @@ get '/work/lighting/boston' do
   @title = 'Boston';
   @subtitle = 'LED Drum Kit';
   @description = YAML::load_file "public/projects/lighting/boston/description.yml"
-  @tools = create_tools_icons(@description, "show")
+  @tools = YAML::load_file "public/projects/lighting/boston/tools.yml"
+  @tools = create_tools_icons(@tools, "show")
   if @description['vimeo_urls']
     @vimeo_videos = create_vimeo_iframes(@description)
   end
@@ -163,7 +174,8 @@ get '/work/lighting/tremont' do
   @title = 'Tremont Street';
   @subtitle = 'Reactive apartment lighting';
   @description = YAML::load_file "public/projects/lighting/tremont/description.yml"
-  @tools = create_tools_icons(@description, "show")
+  @tools = YAML::load_file "public/projects/lighting/tremont/tools.yml"
+  @tools = create_tools_icons(@tools, "show")
   if @description['vimeo_urls']
     @vimeo_videos = create_vimeo_iframes(@description)
   end
@@ -175,7 +187,8 @@ get '/work/lighting/winchester' do
   @title = 'Winchester';
   @subtitle = 'Reactive dorm lighting';
   @description = YAML::load_file "public/projects/lighting/winchester/description.yml"
-  @tools = create_tools_icons(@description, "show")
+  @tools = YAML::load_file "public/projects/lighting/winchester/tools.yml"
+  @tools = create_tools_icons(@tools, "show")
   if @description['vimeo_urls']
     @vimeo_videos = create_vimeo_iframes(@description)
   end

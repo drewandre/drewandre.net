@@ -3,49 +3,17 @@ $(function() {
 	$('.work-text').hide();
 	$('.work-tools').hide();
 
-	// TODO
-	// $(window).scroll(function(i) {
-	// 	var scrollVar = $(window).scrollTop();
-	// 	$('#main-nav').css({ opacity: (150 - scrollVar * 0.1) / 100 });
-	// });
-
-	$('.below-nav').on('touchstart', function(e) {
+	$('.main').on('click', function(e) {
 		e.stopPropagation();
 		$('#main-nav > ul').slideUp('fast');
 		$('.main').removeClass('canvas-blur');
+		$('#main-nav').removeClass('menu-box-shadow');
 	});
 
-	// TODO
-	// $('#menu-icon').on('click', function(e) {
-	// 	e.stopPropagation();
-	// 	$('#main-nav > ul').slideUp('fast');
-	// 	$('.main').removeClass('canvas-blur');
-	// });
-
-	$('#main-nav').on('mouseenter', function(e) {
-		// clearTimeout($('#main-nav').data('timeout'));
-		// var t = setTimeout(function() {
-		$('#main-nav > ul').slideDown('fast');
-		$('.main').addClass('canvas-blur');
-		// }, 200);
-		// $('.home').data('timeout', t);
-
-		// $('#main-nav').css({ opacity: 1 });
-		// $('#main-nav > ul').slideToggle('fast');
-		// $('.main').toggleClass('canvas-blur');
-	});
-
-	$('#main-nav').on('mouseleave', function(e) {
-		clearTimeout($('#main-nav').data('timeout'));
-		var t = setTimeout(function() {
-			$('#main-nav > ul').slideUp('fast');
-			$('.main').removeClass('canvas-blur');
-		}, 200);
-		$('.home').data('timeout', t);
-
-		// $('#main-nav').css({ opacity: 1 });
-		// $('#main-nav > ul').slideToggle('fast');
-		// $('.main').toggleClass('canvas-blur');
+	$('#main-nav').on('click', function(e) {
+		$('#main-nav > ul').slideToggle('fast');
+		$('#main-nav').toggleClass('menu-box-shadow');
+		$('.main').toggleClass('canvas-blur');
 	});
 
 	$('#main-nav ul li').on('click', function(e) {
@@ -81,4 +49,3 @@ $(function() {
 
 // to allow :active styles to work in your CSS on a page in Mobile Safari
 document.addEventListener('touchstart', function() {}, true);
-// $('html, body').scrollTop(1);

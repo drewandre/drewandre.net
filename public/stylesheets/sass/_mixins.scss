@@ -15,6 +15,15 @@
 	-ms-user-select: none;
 }
 
+@mixin no-blur() {
+	-webkit-filter: blur(0px);
+	-moz-filter: blur(0px);
+	-o-filter: blur(0px);
+	-ms-filter: blur(0px);
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='0');
+	filter: blur(0px);
+}
+
 @mixin center($position: absolute) {
 	position: $position;
 	top: 50%;

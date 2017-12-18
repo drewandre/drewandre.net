@@ -17,9 +17,8 @@ var TAU,
 var lastResize = 0;
 canvas = document.getElementsByTagName('canvas')[0];
 main = document.getElementsByClassName('main')[0];
-menu = document.getElementById('main-nav');
-menu_icon = document.getElementById('menu-icon');
-nav = document.getElementsByTagName('nav')[0];
+menu_icon = document.getElementById('menu-icon')[0];
+menu = document.getElementById('menu');
 fpselem = document.getElementById('fps');
 w = canvas.width = document.body.clientWidth;
 h = canvas.height = document.body.clientHeight;
@@ -60,7 +59,10 @@ draw = function() {
 				p = particles[_j];
 				v = noise.perlin2(p.x * period, p.y * period);
 				p.h++;
-				ctx.fillStyle = 'hsla(' + Math.floor(v * 360) + ', 100%, 80%, 0.2)';
+				ctx.fillStyle =
+					'hsla(' +
+					Math.floor(v * randomWithRange(100, 300)) +
+					', 100%, 80%, 0.2)';
 				ctx.fillRect(p.x, p.y, 1.5, 1.5);
 				a = v * 2.5 * Math.PI + p.a;
 				p.x += Math.cos(a);
@@ -115,33 +117,20 @@ window.addEventListener('resize', function(e) {
 	return reset();
 });
 
-menu.addEventListener('mouseenter', function(e) {
-	return pauseAnimation(true);
-});
-
-menu.addEventListener('mouseleave', function(e) {
-	return pauseAnimation(false);
-});
-
 main.addEventListener('click', function() {
-	return pauseAnimation(false);
+	if ((pausePerlin = true)) {
+		pausePerlin = false;
+	}
+	$('#main-nav').css({ boxShadow: 'none' });
+	$('.main').removeClass('canvas-blur');
+	return pauseAnimation(pausePerlin);
 });
 
-menu.addEventListener('mouseenter', function(e) {
-	return pauseAnimation(true);
+menu.addEventListener('click', function(e) {
+	$('.main').toggleClass('canvas-blur');
+	$('#main-nav').css({ boxShadow: '0px 0px 15px rgba(0, 0, 0, 0.35)' });
+	return pauseAnimation(!pausePerlin);
 });
-
-menu.addEventListener('mouseleave', function(e) {
-	return pauseAnimation(false);
-});
-
-main.addEventListener('click', function() {
-	return pauseAnimation(false);
-});
-
-// menu_icon.addEventListener("click", function () {
-//   return pauseAnimation(false);
-// });
 
 f = function() {
 	raf(f);

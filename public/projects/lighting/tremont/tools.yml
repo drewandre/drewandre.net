@@ -1,0 +1,3 @@
+frameworks: null
+libraries: "FastLED"
+hardware: "Arduino MEGA, MSGEQ7, WS2812B LEDS, 750W power supply"

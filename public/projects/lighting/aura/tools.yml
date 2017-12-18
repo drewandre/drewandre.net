@@ -1,0 +1,3 @@
+frameworks: null
+libraries: "FastLED, Teensy Audio"
+hardware: "Teensy 3.2, SGTL5000, 74HCT245, WS2812B LEDS"
