@@ -1,4 +1,4 @@
-$(function() {
+$(document).ready(function() {
 	$("#main-nav > ul").hide();
 	$(".work-text").hide();
 	$(".work-tools").hide();
