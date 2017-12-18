@@ -1,3 +1,7 @@
+import dotenv from '.env';
+
+debugger;
+
 var query = `query User {
   user(login: "drewandre") {
     login
@@ -42,7 +46,7 @@ fetch('https://api.github.com/graphql', {
 	body: JSON.stringify({ query: query }),
 	headers: {
 		'User-Agent': 'drewandre',
-		Authorization: 'bearer e316abe243379b523bc51d731486af873f303c3a',
+		Authorization: `bearer ${GITHUB_OAUTH}`,
 		'Content-Type': 'application/graphql'
 	}
 })
