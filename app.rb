@@ -52,6 +52,7 @@ get '/' do
 end
 
 get '/about' do
+  @GITHUB_OAUTH = ENV["GITHUB_OAUTH"]
   @skills_yml = YAML::load_file "public/about/skills.yml"
   @learning_yml = YAML::load_file "public/about/learning.yml"
   @skills_section = create_about_section(@skills_yml)
