@@ -5,8 +5,10 @@ ruby "2.4.2"
 gem 'activerecord'
 gem 'actionmailer'
 gem 'activesupport'
+gem 'foreman'
 gem 'json'
 gem "pg"
+gem 'puma'
 gem "rake"
 gem "sass"
 gem "sinatra"
