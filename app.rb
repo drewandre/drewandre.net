@@ -120,6 +120,19 @@ get '/work/web/palette' do
   erb :"work/show"
 end
 
+get '/work/web/palmos' do
+  @title = 'Palmos';
+  @subtitle = 'Environmental sensor data';
+  @description = YAML::load_file "public/projects/web/palmos/description.yml"
+  @tools = YAML::load_file "public/projects/web/palmos/tools.yml"
+  @tools = create_tools_icons(@tools, "show")
+  if @description['vimeo_urls']
+    @vimeo_videos = create_vimeo_iframes(@description)
+  end
+  @photos = gather_all_media_from('web/palmos')
+  erb :"work/show"
+end
+
 get '/work/web/reporev' do
   @title = 'RepoRev';
   @subtitle = 'GitHub Repo Search';

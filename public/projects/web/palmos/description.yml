@@ -1,0 +1,8 @@
+title: "Palmos"
+short-description: "Environmental sensor dashboard"
+full-description: "Palmos is a Boston-based startup that designs hardware for landslide and flood detection. The dashboard uses React for the front-end, and is built on a ruby-on-rails backend which pulls in data from AWS."
+external-url: "https://www.palmos.co/"
+github-link: null
+codeship: null
+coveralls: null
+vimeo_urls: null

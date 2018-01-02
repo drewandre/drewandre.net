@@ -1,13 +1,13 @@
 var regexp = /data-count="(\d+)/gi;
 
 var myHeaders = new Headers({
-	'Content-Type': 'text/plain'
+	"Content-Type": "text/plain"
 	// mode: 'no-cors'
-	// 'Access-Control-Allow-Origin': 'http://localhost:4567'
+	// "Access-Control-Allow-Origin": "true"
 	// 'X-Custom-Header': 'hello world'
 });
-
-fetch('https://github.com/users/drewandre/contributions', {
+//
+fetch("https://github.com/users/drewandre/contributions", {
 	headers: myHeaders
 })
 	.then(response => {
@@ -15,7 +15,7 @@ fetch('https://github.com/users/drewandre/contributions', {
 		if (response.ok) {
 			return response.text();
 		} else {
-			return Promise.reject('Could not load GitHub contribution history');
+			return Promise.reject("Could not load GitHub contribution history");
 		}
 	})
 	.then(text => {
@@ -28,28 +28,28 @@ fetch('https://github.com/users/drewandre/contributions', {
 		);
 		drawContributionHistory(contributionData);
 	})
-	.catch(error => console.log('error: ', error));
+	.catch(error => console.log("error: ", error));
 
 function drawContributionHistory(contributionData) {
 	var current_date = new Date();
 	var month = current_date.getMonth();
 	var day = current_date.getDate();
 	var ctx = document
-		.getElementById('github-contribution-history')
-		.getContext('2d');
+		.getElementById("github-contribution-history")
+		.getContext("2d");
 	var gradientStroke = ctx.createLinearGradient(0, 0, 300, 0);
-	gradientStroke.addColorStop(0.1, 'rgba(204,241,243,0)');
-	gradientStroke.addColorStop(0.3, '#CCF1F3');
-	gradientStroke.addColorStop(1, '#CCF1F3');
+	gradientStroke.addColorStop(0.1, "rgba(204,241,243,0)");
+	gradientStroke.addColorStop(0.3, "#CCF1F3");
+	gradientStroke.addColorStop(1, "#CCF1F3");
 	var myChart = new Chart(ctx, {
-		type: 'line',
+		type: "line",
 		pointRadius: 0,
 		data: {
 			labels: new Array(contributionData.length),
 			datasets: [
 				{
 					data: contributionData,
-					backgroundColor: 'rgba(0,0,0,0)',
+					backgroundColor: "rgba(0,0,0,0)",
 					borderColor: gradientStroke,
 					borderWidth: 3
 				}
