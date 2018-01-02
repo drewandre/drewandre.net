@@ -2,40 +2,41 @@
 <div class='centered'>
   <div id='work'>About Me</div>
   <hr id='work-example'/>
-<div class='about-me-container'>
-  <img id='headshot' src='/images/headshot.jpg'></img>
-  <h5><strong>Drew André</strong> is a web developer and lighting designer currently working for Palmos in Boston, Masachusetts.</h5>
-  <p>Drew graduated from <a href='https://www.conncoll.edu/'>Connecticut College</a> in 2016 where he studied a combination of computer science, music, and art. In 2016, Drew was awarded a cirtificate in Arts and Technology by Conneciticut College's <a href='https://www.conncoll.edu/academics/majors-departments-programs/majors-and-minors/ammerman-center-for-arts-and-technology/'>Ammerman Center for Arts and Technology</a>.</p>
-  <p>Recently, Drew graduated from a full-web development bootcamp, <a href='https://launchacademy.com/'>Launch Academy</a>, and began contributing to (your company name here!)'s development team.</p>
-  <p><a href='/contact'>Feel free to get in touch.</a></p>
-</div>
-<div class="chart-container">
-  <canvas id="github-contribution-history"></canvas>
-  <canvas id="language-data"></canvas>
-</div>
-<div class='skills-container'>
-  <h4>What I know</h4>
-  <% @skills_section.each do |section| %>
-  <div class='skills-block'>
-    <% section.each do |skill| %>
-      <%= skill %>
-    <% end %>
-  </div>
-  <% end %>
-</div>
+  <!-- <div class='about-table'> -->
+    <div class='about-me-container'>
+      <img id='headshot' src='/images/headshot.jpg'></img>
+      <h5><strong>Drew André</strong> is a web developer and lighting designer currently working for Palmos in Boston, Masachusetts.</h5>
+      <p>Drew graduated from <a href='https://www.conncoll.edu/'>Connecticut College</a> in 2016 where he studied a combination of computer science, music, and art. In 2016, Drew was awarded a cirtificate in Arts and Technology by Conneciticut College's <a href='https://www.conncoll.edu/academics/majors-departments-programs/majors-and-minors/ammerman-center-for-arts-and-technology/'>Ammerman Center for Arts and Technology</a>.</p>
+      <p>Recently, Drew graduated from a full-web development bootcamp, <a href='https://launchacademy.com/'>Launch Academy</a>, and began contributing to (your company name here!)'s development team.</p>
+      <p><a href='/contact'>Feel free to get in touch.</a></p>
+      <div class="chart-container">
+        <!-- <canvas id="github-contribution-history"></canvas> -->
+        <canvas id="language-data"></canvas>
+      </div>
+    </div>
 
-<div class='skills-container'>
-  <h4>What I'm working on</h4>
-  <% @learning_section.each do |section| %>
+  <!-- </div> -->
+  <div class='skills-container'>
+    <h4>What I know</h4>
+    <% @skills_section.each do |section| %>
     <div class='skills-block'>
-      <% section.each do |pending_skill| %>
-        <%= pending_skill %>
+      <% section.each do |skill| %>
+        <%= skill %>
       <% end %>
     </div>
-  <% end %>
-</div>
-
+    <% end %>
+  </div>
+  <div class='skills-container'>
+    <h4>What I'm working on</h4>
+    <% @learning_section.each do |section| %>
+      <div class='skills-block'>
+        <% section.each do |pending_skill| %>
+          <%= pending_skill %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
 </div>
 <script src="/javascripts/Chart.bundle.min.js"></script>
-<script src="/javascripts/about_contributions.js"></script>
+<!-- <script src="/javascripts/about_contributions.js"></script> -->
 <script src="/javascripts/about_languages.js" GITHUB_OAUTH=<%= @GITHUB_OAUTH %>></script>
