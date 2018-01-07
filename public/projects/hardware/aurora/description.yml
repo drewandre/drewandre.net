@@ -1,0 +1,8 @@
+title: "Aurora"
+short-description: "MSGEQ7 + Arduino playground"
+full-description: "Aurora combines the circuitry of an Arduino Pro Micro with stereo MSGEQ7 audio analysis ICs. Users can use and program the board just as they would an Arduino, with the addition of 7-band audio analysis capabilities."
+external-url: null
+github-link: null
+codeship: null
+coveralls: null
+vimeo_urls: null

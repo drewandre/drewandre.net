@@ -93,17 +93,10 @@ get '/work/lighting' do
   erb :"work/index"
 end
 
-get '/work/web' do
-    @title = 'WORK';
-    @subtitle = '(WEB)';
-    @photos = gather_top_images_from('web')
-  erb :"work/index"
-end
-
-get '/work/lighting' do
+get '/work/hardware' do
   @title = 'WORK';
-  @subtitle = '(LIGHTING)';
-  @photos = gather_top_images_from('lighting')
+  @subtitle = '(HARDWARE)';
+  @photos = gather_top_images_from('hardware')
   erb :"work/index"
 end
 
@@ -208,6 +201,45 @@ get '/work/lighting/winchester' do
     @vimeo_videos = create_vimeo_iframes(@description)
   end
   @photos = gather_all_media_from('lighting/winchester')
+  erb :"work/show"
+end
+
+get '/work/hardware/palette' do
+  @title = 'Palette';
+  @subtitle = 'LED + Audio playground';
+  @description = YAML::load_file "public/projects/hardware/palette/description.yml"
+  @tools = YAML::load_file "public/projects/hardware/palette/tools.yml"
+  @tools = create_tools_icons(@tools, "show")
+  if @description['vimeo_urls']
+    @vimeo_videos = create_vimeo_iframes(@description)
+  end
+  @photos = gather_all_media_from('hardware/palette')
+  erb :"work/show"
+end
+
+get '/work/hardware/aurora' do
+  @title = 'Aurora';
+  @subtitle = 'Arduino + MSGEQ7 playground';
+  @description = YAML::load_file "public/projects/hardware/aurora/description.yml"
+  @tools = YAML::load_file "public/projects/hardware/aurora/tools.yml"
+  @tools = create_tools_icons(@tools, "show")
+  if @description['vimeo_urls']
+    @vimeo_videos = create_vimeo_iframes(@description)
+  end
+  @photos = gather_all_media_from('hardware/aurora')
+  erb :"work/show"
+end
+
+get '/work/hardware/boston' do
+  @title = 'HyperSpace';
+  @subtitle = '14-channel piezo interface';
+  @description = YAML::load_file "public/projects/hardware/boston/description.yml"
+  @tools = YAML::load_file "public/projects/hardware/boston/tools.yml"
+  @tools = create_tools_icons(@tools, "show")
+  if @description['vimeo_urls']
+    @vimeo_videos = create_vimeo_iframes(@description)
+  end
+  @photos = gather_all_media_from('hardware/boston')
   erb :"work/show"
 end
 

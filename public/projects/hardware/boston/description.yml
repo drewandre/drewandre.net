@@ -1,0 +1,8 @@
+title: "HyperSpace"
+short-description: "14-channel piezo interface"
+full-description: "Designed for band Boston's 2017 HyperSpace Tour, this system is capable of reading in 14 piezo sensor channels and using 5v level shifting to map trigger events to LEDs."
+external-url: null
+github-link: null
+codeship: null
+coveralls: null
+vimeo_urls: null

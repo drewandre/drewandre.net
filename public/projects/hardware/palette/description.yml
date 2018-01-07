@@ -1,0 +1,8 @@
+title: "Palette"
+short-description: "LED + Audio playground"
+full-description: "Palette is a smart LED controller built for hobbyists, lighting designers, and musicians. At its heart, Palette combines a 32 bit ARM processor with a stereo audio codec for fast processing power and clean audio I/O. Additional features include an on-board low-noise, high dynamic range MEMS microphone, opto-isolated MIDI in, 8-way parallel FastLED output, a soft power switch, 5v level shifting, audio plug detection, on board status LEDs, a real-time-clock, and a 10A DC power jack."
+external-url: null
+github-link: null
+codeship: null
+coveralls: null
+vimeo_urls: null
