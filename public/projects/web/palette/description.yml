@@ -1,5 +1,5 @@
 title: "Palette"
-short-description: "Smart LED controller - WORK IN PROGRESS"
+short-description: "Smart LED controller"
 full-description: "Palette allows users to have control over one, or many smart lighting products. Users can design color palettes on a React front end, or drop a photo onto the screen to automatically create a color palette. Users can also tap into real-time API date to influence lighting parameters throughout the day."
 external-url: "https://palette-dashboard.herokuapp.com/"
 github-link: "https://github.com/drewandre/palette"

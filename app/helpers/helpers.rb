@@ -105,6 +105,7 @@ helpers do
     return (
       "<a class='work-link' href='#{folder}/#{project}'>
         <div class='work-text'><h4>#{description['title']}</h4>
+        <h5 id='top-photo-description'>#{description['short-description']}</h5>
         <h5>#{combinedToolsList}</h5></div>
         <img class='work-tile' src='/projects/#{folder}/#{project}/#{file}' alt='#{description['title']}'/>
       </a>"
