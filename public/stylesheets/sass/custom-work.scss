@@ -8,9 +8,13 @@
 	display: inline-table;
 	width: 50%;
 	font-size: 1.1em;
-	font-weight: 100;
+	font-weight: 300;
 	line-height: 1.8em;
 	color: $off-white;
+}
+
+.contact-description > p a {
+	color: $cta-background;
 }
 
 #contact-info {
