@@ -1,6 +1,14 @@
 @import 'colors';
 @import 'mixins';
 
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
 .contact-description {
 	user-select: all;
 	letter-spacing: 2px;
@@ -33,6 +41,7 @@
 }
 
 input#contact-input {
+	-webkit-appearance: none;
 	margin: 10px auto;
 	width: 85%;
 	height: 40px;
