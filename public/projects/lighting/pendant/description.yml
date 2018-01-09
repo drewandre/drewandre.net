@@ -1,8 +1,9 @@
 title: "Pendant"
 short-description: "Audio reactive LED pendant"
-full-description: "This is a work in progress - battery is hidden."
+full-description: "This pendant is powered by an ATmega32U4 and MSGEQ7 frequency analysis chip. Pictured below is a proof of concept, but the current design houses the circuitry, microphone, bluetooth chip, and array of 150mAh lipo batteries underneath the ring. "
 external-url: null
 github-link: null
 codeship: null
 coveralls: null
 vimeo_urls: "246737396"
+notes: "Proof of concept - battery is hidden in media below. Standalone prototype expected February 2018."

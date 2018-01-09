@@ -152,6 +152,19 @@ get '/work/web/portfolio' do
   erb :"work/show"
 end
 
+get '/work/lighting/pendant' do
+  @title = 'Pendant';
+  @subtitle = 'Audio reactive LED pendant';
+  @description = YAML::load_file "public/projects/lighting/pendant/description.yml"
+  @tools = YAML::load_file "public/projects/lighting/pendant/tools.yml"
+  @tools = create_tools_icons(@tools, "show")
+  if @description['vimeo_urls']
+    @vimeo_videos = create_vimeo_iframes(@description)
+  end
+  @photos = gather_all_media_from('lighting/pendant')
+  erb :"work/show"
+end
+
 get '/work/lighting/aura' do
   @title = 'Aura';
   @subtitle = 'Smart LED controller';

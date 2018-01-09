@@ -281,5 +281,14 @@ img.work-info {
 	margin: 50px 0;
 	width: 100vw;
 	max-width: 500px;
-	// background: red;
+}
+
+.work-notes {
+	text-align: center;
+	width: 85%;
+	margin: 10px auto;
+	border-radius: 5px;
+	padding: 5px 7px;
+	border: 2px solid $error;
+	color: $off-white;
 }

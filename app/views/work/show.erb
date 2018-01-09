@@ -11,6 +11,9 @@
           <i class="fa fa-external-link" id="open-link-icon" aria-hidden="true"></i>
         </a>
       <% end %>
+      <% if @description['notes'] %>
+        <div class='work-notes'><%= @description['notes'] %></div>
+      <% end %>
       <p class='work-info'>Description</p>
       <p class='work-description'>
         <%= @description['full-description']%>
