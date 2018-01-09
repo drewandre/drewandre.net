@@ -7,7 +7,11 @@
 @import 'about';
 @import 'work';
 @import 'flash';
-@import 'flash';
+
+// #home-page {
+// 	position: absolute;
+// 	bottom: 0;
+// }
 
 @media (max-width: 750px) {
 	footer {
@@ -19,6 +23,18 @@
 		height: 60px;
 		text-align: center;
 		padding: 50px 0 10px 0;
+	}
+	canvas {
+		@include no-user-select();
+		z-index: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		@include no-blur();
 	}
 }
 
@@ -34,11 +50,18 @@
 		height: fit-content;
 		float: right;
 	}
-}
-
-#home-page {
-	position: absolute;
-	bottom: 0;
+	canvas {
+		@include no-user-select();
+		z-index: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		filter: blur(1px);
+	}
 }
 
 body,
@@ -49,19 +72,6 @@ html {
 	padding: 0;
 	height: 100%;
 	background-color: $main-background;
-}
-
-canvas {
-	@include no-user-select();
-	z-index: 0;
-	position: absolute;
-	top: 0;
-	left: 0;
-	padding: 0;
-	margin: 0;
-	width: 100%;
-	height: 100%;
-	@include no-blur();
 }
 
 .main {
