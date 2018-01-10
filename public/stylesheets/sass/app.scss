@@ -8,11 +8,6 @@
 @import 'work';
 @import 'flash';
 
-// #home-page {
-// 	position: absolute;
-// 	bottom: 0;
-// }
-
 @media (max-width: 750px) {
 	footer {
 		@include no-user-select();
