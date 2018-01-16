@@ -31,7 +31,7 @@
 .about-me-container h5 {
 	pointer-events: all;
 	@include no-user-select();
-	padding: 40px 5%;
+	padding: 40px 5% 0 5%;
 	margin: 0;
 	width: fit-content;
 	display: inline-block;
