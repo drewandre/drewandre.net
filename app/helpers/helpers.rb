@@ -77,7 +77,7 @@ helpers do
     title = File.basename(file,File.extname(file)).gsub(/[_-]/, ' ').split.map(&:capitalize).join(' ')
     return (
       "<div class='work-static'>
-        <video controls width='100%'>
+        <video autoplay width='100%'>
           <source src='/projects/#{folder}/#{file}' alt='#{title}' type='video/mp4'>
         </video>
       </div>"
@@ -95,6 +95,8 @@ helpers do
         else
           media.push(img(folder, file))
         end
+      when '.mp4'
+        media.unshift(vid(folder, file))
       end
     end
     return media
