@@ -77,8 +77,9 @@ helpers do
     title = File.basename(file,File.extname(file)).gsub(/[_-]/, ' ').split.map(&:capitalize).join(' ')
     return (
       "<div class='work-static'>
-        <video autoplay muted playsinline width='100%'>
-          <source src='/projects/#{folder}/#{file}' alt='#{title}' type='video/mp4'>
+        <video loop autoplay controls muted playsinline width='100%'>
+          <source type='video/mp4' src='/projects/#{folder}/#{file}' alt='#{title}'></source>
+          <source type='video/webm' src='/projects/#{folder}/#{file}' alt='#{title}'></source>
         </video>
       </div>"
     )
