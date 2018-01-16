@@ -1,0 +1,3 @@
+frameworks: "Sinatra, PostgreSQL, React.js"
+libraries: "RSpotify, MailChimp"
+hardware: null

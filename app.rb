@@ -152,6 +152,19 @@ get '/work/web/portfolio' do
   erb :"work/show"
 end
 
+get '/work/web/newsletter' do
+  @title = 'Newsletter';
+  @subtitle = 'Mailing list landing page';
+  @description = YAML::load_file "public/projects/web/newsletter/description.yml"
+  @tools = YAML::load_file "public/projects/web/newsletter/tools.yml"
+  @tools = create_tools_icons(@tools, "show")
+  if @description['vimeo_urls']
+    @vimeo_videos = create_vimeo_iframes(@description)
+  end
+  @photos = gather_all_media_from('web/newsletter')
+  erb :"work/show"
+end
+
 get '/work/lighting/pendant' do
   @title = 'Pendant';
   @subtitle = 'Audio reactive LED pendant';

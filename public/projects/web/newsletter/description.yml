@@ -1,0 +1,9 @@
+title: "Newsletter"
+short-description: "Mailing list landing page"
+full-description: "This newsletter subscription landing page uses a Spotify wrapper to help users auto populate the form with their top artists and genre preferences. Upon submission, subscriber information gets stored in a PostgreSQL database through ActiveRecord and sent off to mailchimp."
+external-url: null
+github-link: "https://github.com/drewandre/newsletter"
+codeship: null
+coveralls: null
+vimeo_urls: null
+notes: "Website to go live late January 2018"
