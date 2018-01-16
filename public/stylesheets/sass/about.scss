@@ -50,6 +50,10 @@
 	padding: 10px 5%;
 }
 
+.about-me-container > p a {
+	color: $cta-background;
+}
+
 #headshot {
 	margin: 20px 0;
 	pointer-events: none;
