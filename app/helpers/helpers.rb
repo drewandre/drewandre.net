@@ -78,8 +78,8 @@ helpers do
     return (
       "<div class='work-static'>
         <video loop autoplay controls muted playsinline width='100%'>
-          <source type='video/mp4' src='/projects/#{folder}/#{file}' alt='#{title}'></source>
           <source type='video/webm' src='/projects/#{folder}/#{file}' alt='#{title}'></source>
+          <source type='video/mp4' src='/projects/#{folder}/#{file}' alt='#{title}'></source>
         </video>
       </div>"
     )

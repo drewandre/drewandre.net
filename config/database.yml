@@ -3,6 +3,7 @@ development:
   adapter: postgresql
   encoding: unicode
   database: drewandre_development
+  host: localhost
   pool: 5
   username:
   password:
@@ -12,6 +13,7 @@ test:
   adapter: postgresql
   encoding: unicode
   database: drewandre_development_test
+  host: localhost
   pool: 5
   username:
   password:
@@ -21,6 +23,7 @@ production:
   adapter: postgresql
   encoding: unicode
   database: drewandre_production
+  host: localhost
   pool: 5
   username:
   password:
